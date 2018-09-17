@@ -5,10 +5,6 @@ import './App.scss';
 import 'debug.addIndicators';
 import 'TimelineLite';
 
-
-
-
-
 class App extends Component {
   render() {
     return (  
