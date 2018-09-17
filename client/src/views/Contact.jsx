@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import Sidebar from '../common/sidebar/Sidebar';
 import contactImage from '../assets/img/contact.png';
 import NavPills from '../common/NavPills/NavPills';
@@ -9,7 +9,12 @@ import List from '@material-ui/icons/ListAlt';
 import Message from '@material-ui/icons/Message';
 import Schedule from '@material-ui/icons/Schedule';
 import Create from '@material-ui/icons/Create';
-import Press from '@material-ui/icons/AssignmentInd';
+import PressIcon from '@material-ui/icons/AssignmentInd';
+
+import {Hello} from '../components/Contact/Hello';
+import {Designer} from '../components/Contact/Designer';
+import {Jobs} from '../components/Contact/Jobs';
+import {Press} from '../components/Contact/Press';
 
 export default class Contact extends Component {
   render() {
@@ -17,51 +22,49 @@ export default class Contact extends Component {
       <div>
         contact works
         <GridContainer>
-              <GridItem xs={12} sm={12} md={12} lg={12}>
-                <NavPills
-                  color="primary"
-                  tabs={[
-                    {
-                      tabButton: "Just say hello",
-                      tabIcon: Message,
-                      tabContent: (
-                        <span>
-                         contact 2
-                        </span>
-                      )
-                    },
-                    {
-                      tabButton: "Jobs & Internships",
-                      tabIcon: List,
-                      tabContent: (
-                        <span>
-                          contact 1
-                        </span>
-                      )
-                    },
-                    {
-                      tabButton: "Creator & designer",
-                      tabIcon: Create,
-                      tabContent: (
-                        <span>
-                         contact 3
-                        </span>
-                      )
-                    },
-                    {
-                      tabButton: "Press",
-                      tabIcon: Press,
-                      tabContent: (
-                        <span>
-                         contact 4
-                        </span>
-                      )
-                    }
-                  ]}
-                />
-              </GridItem>
-              </GridContainer>
-        <Sidebar bgImage={contactImage} currentPage="CONTACT"/>  
+          <GridItem xs={12} sm={10} md={10} lg={8} >
+            <NavPills
+              color="primary"
+              tabs={[
+              {
+                tabButton: "Just say hello",
+                tabIcon: Message,
+                tabContent: (
+                  <span>
+                    <Hello/>
+                  </span>
+                )
+              }, {
+                tabButton: "Jobs & Internships",
+                tabIcon: List,
+                tabContent: (
+                  <span>
+                    <Jobs/>
+                  </span>
+                )
+              }, {
+                tabButton: "Creator & designer",
+                tabIcon: Create,
+                tabContent: (
+                  <span>
+                    <Designer/>
+                  </span>
+                )
+              }, {
+                tabButton: "Press",
+                tabIcon: PressIcon,
+                tabContent: (
+                  <span>
+                    <Press/>
+                  </span>
+                )
+              }
+            ]}/>
+          </GridItem>
+          <GridItem sm={2} md={2} lg={4}>
+            <Sidebar bgImage={contactImage} currentPage="CONTACT"/>
+          </GridItem>
+        </GridContainer>
       </div>
     )
   }

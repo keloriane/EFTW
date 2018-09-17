@@ -69,13 +69,14 @@ const defaultFont = {
   lineHeight: "1.5em"
 };
 
-const primaryColor = "#F9A825";
+const primaryColor = "rgba(209, 130, 4, 0.5)";
 const warningColor = "#F57F17";
 const dangerColor = "#f44336";
 const successColor = "#4caf50";
 const infoColor = "#00acc1";
 const roseColor = "#e91e63";
 const grayColor = "#999999";
+// const contactNavLink = "#F9A825"
 
 const primaryBoxShadow = {
   boxShadow:

@@ -38,14 +38,19 @@ const navPillsStyle = theme => ({
     textAlign: "center",
     transition: "all .3s",
     padding: "10px 15px",
-    color: "#555555",
+    color: "#5D1F18",
     height: "auto",
     opacity: "1",
     maxWidth: "100%",
-    margin: "0 5px"
+    margin: "0 5px",
+    "&:hover": {
+      color: "#5D1F18",
+      boxShadow:
+        "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(209, 130, 4, 0.5)"
+    }
   },
   pillsWithIcons: {
-    borderRadius: "4px"
+    borderRadius: "0px"
   },
   tabIcon: {
     width: "30px",
@@ -78,10 +83,10 @@ const navPillsStyle = theme => ({
   },
   primary: {
     "&,&:hover": {
-      color: "#FFFFFF",
+      color: "#5D1F18",
       backgroundColor: primaryColor,
       boxShadow:
-        "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4)"
+        "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(209, 130, 4, 0.5)"
     }
   },
   info: {
@@ -105,7 +110,7 @@ const navPillsStyle = theme => ({
       color: "#FFFFFF",
       backgroundColor: warningColor,
       boxShadow:
-        "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 152, 0, 0.4)"
+        "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(209, 130, 4, 0.5)"
     }
   },
   danger: {
@@ -113,7 +118,7 @@ const navPillsStyle = theme => ({
       color: "#FFFFFF",
       backgroundColor: dangerColor,
       boxShadow:
-        "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 152, 0, 0.4)"
+        "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(209, 130, 4, 0.5)"
     }
   },
   rose: {
