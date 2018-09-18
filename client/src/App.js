@@ -4,7 +4,7 @@ import './App.scss';
 
 import 'debug.addIndicators';
 import 'TimelineLite';
-import Home from './views/Home';
+import {Home} from './views/Home';
 import Highlight from './views/Highlight';
 import About from './views/About';
 import Events from './views/Events';

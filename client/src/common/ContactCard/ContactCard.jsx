@@ -9,7 +9,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 const styles = {
   mainPaper:{
     textAlign:'center',
-    backgroundColor:'rgba(209, 130, 4, 0.5)',
+    background:'rgba(209, 130, 4, 0.5)',
     padding: '20px'
   }
 };
@@ -17,11 +17,11 @@ const styles = {
 const ContactCard = ({classes, contactTitle, contactInfos}) => {
   return (
     <div>
-        <GridContainer>
-        <GridItem xs={12} sm={12} md={12} >
+        <GridContainer justify="center">
+        <GridItem xs={12} sm={12} md={8}>
           <Paper className={classes.mainPaper} square>
             <Typography variant="title">{contactTitle}</Typography>
-            <div>{contactInfos}</div>
+            <Typography variant="subheading">{contactInfos}</Typography>
           </Paper>
         </GridItem>
       </GridContainer>

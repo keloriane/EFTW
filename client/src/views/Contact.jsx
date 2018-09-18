@@ -20,11 +20,18 @@ export default class Contact extends Component {
   render() {
     return (
       <div>
-        contact works
-        <GridContainer>
-          <GridItem xs={12} sm={10} md={10} lg={8} >
+        {/* contact works */}
+        <GridContainer >
+          <GridItem xs={12} sm={12} md={10} lg={10} >
+          <div style={{marginTop: '100px'}}>
+
+         
             <NavPills
               color="primary"
+              horizontal={{
+                tabsGrid: { xs: 12, sm: 3, md: 3 },
+                contentGrid: { xs: 12, sm: 8, md: 8 }
+              }}
               tabs={[
               {
                 tabButton: "Just say hello",
@@ -60,8 +67,9 @@ export default class Contact extends Component {
                 )
               }
             ]}/>
+             </div>
           </GridItem>
-          <GridItem sm={2} md={2} lg={4}>
+          <GridItem sm={2} md={2} lg={2}>
             <Sidebar bgImage={contactImage} currentPage="CONTACT"/>
           </GridItem>
         </GridContainer>

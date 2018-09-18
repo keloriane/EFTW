@@ -84,9 +84,9 @@ const navPillsStyle = theme => ({
   primary: {
     "&,&:hover": {
       color: "#5D1F18",
-      backgroundColor: primaryColor,
+      background: "rgba(209, 130, 4, 0.5)",
       boxShadow:
-        "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(209, 130, 4, 0.5)"
+        "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(251,140,0, 0.5)"
     }
   },
   info: {

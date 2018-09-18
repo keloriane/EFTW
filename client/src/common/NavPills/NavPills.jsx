@@ -88,6 +88,7 @@ class NavPills extends React.Component {
           index={this.state.active}
           onChangeIndex={this.handleChangeIndex}
         >
+
           {tabs.map((prop, key) => {
             return (
               <div className={classes.tabContent} key={key}>

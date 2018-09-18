@@ -46,15 +46,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/html'));
 })
 
-
-// test request 
-
-// test = request.get('https://rotterdam.tcbmedia.eu/user/3/accounts/')
-
-// app.get('https://rotterdam.tcbmedia.eu/user/3/accounts/', (req,res, next) => {
-//   console.log(req);
-// });
-// // console.log(test)
 //Error Handling
 app.use((req, res, next) => {
   const error = new Error("Not found");
