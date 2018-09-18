@@ -4,17 +4,15 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-
+import Paper from '@material-ui/core/Paper'
 const styles = {
-  root: {
-    flexGrow: 1
-  },
+
   sidebar: {
-    position: 'absolute',
-    top:0,
-    right:'120px',
-    bottom:0,
-    width:'120px',
+    position: 'relative',
+
+   
+   
+    width:'145px',
     height:'100%',
     backgroundColor:'rgba(0, 0, 0, 0.5)',
     backgroundSize: 'cover'
@@ -38,17 +36,16 @@ const styles = {
 
 function Sidebar({classes, currentPage, bgImage}) {
   return (
-    <div className={classes.root}>
-     <div className="sideImage">
-     <AppBar className={classes.sidebar} style={{background:`linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(${bgImage})`}} position="fixed" color="default">
+   <div className="sectionBar">
+     <Paper className={classes.sidebar} style={{background:`linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(${bgImage})`}} position="fixed" color="default">
         <Toolbar className={classes.currentPage}>
           <Typography variant="title" className={classes.typo} >
             {currentPage}
           </Typography>
         </Toolbar>
-      </AppBar>
-     </div>
-    </div>
+      </Paper>
+      </div>
+   
   );
 }
 

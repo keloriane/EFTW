@@ -1,5 +1,6 @@
 @import "layout/about.scss";
 @import "layout/sidebar.scss";
+@import "layout/socialBar.scss";
 
 
 *{
@@ -11,7 +12,7 @@
 }
 
 h2{
-  font-family: butler;
+  font-family: 'butler';
 }
 @font-face {
   font-family: 'butler';
