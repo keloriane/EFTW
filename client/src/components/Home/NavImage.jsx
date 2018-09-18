@@ -1,10 +1,21 @@
 import React, {Component} from 'react'
 import GridContainer from '../../common/grid/GridContainer';
 import GridItem from '../../common/grid/GridItem';
-import {NavLink} from 'react-router-dom';
-import {Button} from '@material-ui/core';
+
 export default class NavImage extends Component {
+  componentDidUpdate(){
+    // let imageSource = ''
+    const {activeLink} = this.props;
+    if (activeLink === 'about'){
+      // imageSource = '../../assets/img/about.png';
+    } else if (activeLink === 'contact'){
+      // imageSource = '../../assets/img/contact.png'
+    } else if (activeLink === 'highlights'){
+      // imageSource = '../../assets/img/highlights.png'
+    }
+  }
   render() {
+
     return (
       <div>
         <GridContainer>
@@ -15,7 +26,7 @@ export default class NavImage extends Component {
             style={{
             textAlign: 'center'
           }}>
-            Hello, image here
+            <img src='./dqzd/' alt={this.props.activeLink}></img>
           </GridItem>
         </GridContainer>
       </div>

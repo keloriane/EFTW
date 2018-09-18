@@ -4,19 +4,17 @@ import GridItem from '../common/grid/GridItem';
 import NavHome from '../components/Home/NavHome'
 import NavImage from '../components/Home/NavImage'
 export default class Home extends Component {
-  state={
-    activeLink: ''
-  }
+
   render() {
     return (
       <div>
         <GridContainer>
-          <GridItem xs={8} sm={6} md={6}>
+          <GridItem xs={12} sm={12} md={12}>
             <NavHome/>
           </GridItem>
-          <GridItem xs={4} sm={6} md={6}>
-            <NavImage/>
-          </GridItem>
+          {/* <GridItem xs={4} sm={6} md={6}>
+            <NavImage activeLink={this.state.activeLink}/>
+          </GridItem> */}
         </GridContainer>
       </div>
     )
