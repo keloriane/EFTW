@@ -1,2 +1,19 @@
 @import "layout/about.scss";
 @import "layout/sidebar.scss";
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.butler{
+  font-family: 'butler';
+}
+
+h2{
+  font-family: butler;
+}
+@font-face {
+  font-family: 'butler';
+  src: url('./assets/font/Butler_Medium.otf');
+}

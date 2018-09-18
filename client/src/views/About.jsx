@@ -7,7 +7,9 @@ export default class About extends Component {
     return (
       <div>
         about works
-        <Sidebar bgImage={aboutImage} />  
+        <Sidebar bgImage={aboutImage}
+        currentPage='ABOUT'
+        />  
 
       </div>
     )

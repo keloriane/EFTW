@@ -8,6 +8,7 @@ import aboutImg from '../../assets/img/about.png';
 import contactImg from '../../assets/img/contact.png';
 import highlightsImg from '../../assets/img/highlights.png';
 import programImg from '../../assets/img/program.png';
+import TypographyCustom from '../../common/typo/TypographyCustom';
 
 export default class NavHome extends Component {
   state={
@@ -38,13 +39,17 @@ export default class NavHome extends Component {
 
     return (
       <div>
-        <GridContainer>
+        <GridContainer style={{
+          backgroundColor: '#000',
+            
+        }}>
           <GridItem
             xs={12}
             sm={6}
             md={6}
             style={{
             textAlign: 'center',
+            
           }}>
             <GridContainer>
             <GridItem
@@ -52,11 +57,12 @@ export default class NavHome extends Component {
             sm={12}
             md={12}
             style={{
-            textAlign: 'center'
+            textAlign: 'center',
+            
           }}>
                 <NavLink to='/about' style={{ textDecoration: 'none' }}>
-                  <Button id="about" onMouseEnter={this.handleChange}>
-                    ABOUT
+                  <Button id="about" onMouseEnter={this.handleChange} className="butler">
+                  <TypographyCustom content="ABOUT" size="45px" color="#fff"/>
                   </Button>
                 </NavLink>
               </GridItem>
@@ -68,8 +74,8 @@ export default class NavHome extends Component {
             textAlign: 'center'
           }}>
                 <NavLink to='/highlights' style={{ textDecoration: 'none' }}>
-                  <Button id="highlights" onMouseEnter={this.handleChange}>
-                    HIGHLIGHTS
+                  <Button id="highlights" onMouseEnter={this.handleChange} className="butler">
+                  <TypographyCustom content="HIGHLIGHTS" size="45px" color="#fff"/>
                   </Button>
                 </NavLink>
               </GridItem>
@@ -81,8 +87,9 @@ export default class NavHome extends Component {
             textAlign: 'center'
           }}>
                 <NavLink to='/program' style={{ textDecoration: 'none' }}>
-                  <Button id="program" onMouseEnter={this.handleChange}>
-                    ETFW 2018's PROGRAM
+                  <Button id="program" onMouseEnter={this.handleChange} className="butler">
+                  <TypographyCustom content="ETFW 2018's PROGRAM" size="45px" color="#fff"/>
+                    
                   </Button>
                 </NavLink>
               </GridItem>
@@ -94,8 +101,9 @@ export default class NavHome extends Component {
             textAlign: 'center'
           }}>
                 <NavLink to='/contact' style={{ textDecoration: 'none' }}>
-                  <Button id="contact" onMouseEnter={this.handleChange}>
-                    CONTACT
+                  <Button id="contact" onMouseEnter={this.handleChange} className="butler">
+                  <TypographyCustom content="CONTACT" size="45px" color="#fff" />
+                    
                   </Button>
                 </NavLink>
               </GridItem>
@@ -106,9 +114,10 @@ export default class NavHome extends Component {
             sm={6}
             md={6}
             style={{
-            textAlign: 'center'
+            textAlign: 'center',
+            height: '100vh'
           }}>
-            <img src={imageSource} style={{width:'100%', maxHeight:'670px'}}>
+            <img src={imageSource} style={{width:'100%', maxHeight:'100%'}}>
             </img>
           </GridItem>
         </GridContainer>

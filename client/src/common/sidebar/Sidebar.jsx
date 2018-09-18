@@ -25,11 +25,14 @@ const styles = {
     left:'5%',
     right:'5%',
     transform:'rotate(90deg)'
+    
   },
   typo: {
     fontSize:'30px',
     color:'white',
-    letterSpacing:'4px'
+    letterSpacing:'4px',
+    textTransform: 'uppercase',
+    fontFamily: 'butler'
   }
 };
 
