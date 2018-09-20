@@ -1,0 +1,24 @@
+.side_bar__container {
+  
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .menu__item {
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+    margin: 0 auto;
+  }
+
+  .page_title__item {
+    font-size:30px;
+    font-family: avenir;
+    color:#fff;
+    letter-spacing: 4px;
+    margin: auto 0;
+    transform:rotate(90deg);
+  }
+
+}

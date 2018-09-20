@@ -1,47 +1,52 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 import GridContainer from '../../common/grid/GridContainer';
 import GridItem from '../../common/grid/GridItem';
 import {NavLink} from 'react-router-dom';
-import {Button} from '@material-ui/core';
 
 import aboutImg from '../../assets/img/about.png';
 import contactImg from '../../assets/img/contact.png';
 import highlightsImg from '../../assets/img/highlights.png';
 import programImg from '../../assets/img/program.png';
-import TypographyCustom from '../../common/typo/TypographyCustom';
+import HomeButton from '../../common/customButtons/HomeButton';
+
+import logo from '../../assets/img/main_black.png'
 
 export default class NavHome extends Component {
-  state={
+  state = {
     activeLink: 'about'
   }
 
   handleChange = (e) => {
     e.preventDefault();
-    this.setState({
-      activeLink: e.target.id
-    })
+    this.setState({activeLink: e.target.id})
   }
 
-  componentDidUpdate(){
+  handleLeave = (e) => {
+    e.preventDefault();
+  }
+
+  componentDidUpdate() {
     console.log(this.state)
   }
   render() {
     let imageSource = aboutImg;
-    if (this.state.activeLink === 'about'){
+    if (this.state.activeLink === 'about') {
       imageSource = aboutImg;
-    } else if (this.state.activeLink === 'highlights'){
+    } else if (this.state.activeLink === 'highlights') {
       imageSource = highlightsImg
-    } else if (this.state.activeLink === 'program'){
+    } else if (this.state.activeLink === 'program') {
       imageSource = programImg
-    }else if (this.state.activeLink === 'contact'){
+    } else if (this.state.activeLink === 'contact') {
       imageSource = contactImg
-    } 
+    }
 
     return (
-      <div>
-        <GridContainer style={{
-          backgroundColor: '#000',
-            
+      <div style={{overflow:'hidden'}}>
+        <GridContainer
+          justify="center"
+          alignItems="center"
+          style={{
+          backgroundColor: '#fff'
         }}>
           <GridItem
             xs={12}
@@ -49,62 +54,54 @@ export default class NavHome extends Component {
             md={6}
             style={{
             textAlign: 'center',
-            
+            height: '400px'
           }}>
             <GridContainer>
-            <GridItem
-            xs={12}
-            sm={12}
-            md={12}
-            style={{
-            textAlign: 'center',
-            
-          }}>
-                <NavLink to='/about' style={{ textDecoration: 'none' }}>
-                  <Button id="about" onMouseEnter={this.handleChange} className="butler">
-                  <TypographyCustom content="ABOUT" size="45px" color="#fff"/>
-                  </Button>
+              <GridItem xs={12} sm={12} md={12}>
+                <img src={logo} style={{width:'278px'}} alt="logo"></img>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12}>
+                <NavLink
+                  to='/about'
+                  style={{
+                  textDecoration: 'none'
+                }}>
+                  <HomeButton id="about" onMouseEnter={this.handleChange} onMouseLeave={this.handleLeave} className="avenir">
+                    ABOUT
+                  </HomeButton>
                 </NavLink>
               </GridItem>
-              <GridItem
-            xs={12}
-            sm={12}
-            md={12}
-            style={{
-            textAlign: 'center'
-          }}>
-                <NavLink to='/highlights' style={{ textDecoration: 'none' }}>
-                  <Button id="highlights" onMouseEnter={this.handleChange} className="butler">
-                  <TypographyCustom content="HIGHLIGHTS" size="45px" color="#fff"/>
-                  </Button>
+              <GridItem xs={12} sm={12} md={12}>
+                <NavLink
+                  to='/highlights'
+                  style={{
+                  textDecoration: 'none'
+                }}>
+                  <HomeButton id="highlights" onMouseEnter={this.handleChange} onMouseLeave={this.handleLeave} className="avenir">
+                    HIGHLIGHTS
+                  </HomeButton>
                 </NavLink>
               </GridItem>
-              <GridItem
-            xs={12}
-            sm={12}
-            md={12}
-            style={{
-            textAlign: 'center'
-          }}>
-                <NavLink to='/program' style={{ textDecoration: 'none' }}>
-                  <Button id="program" onMouseEnter={this.handleChange} className="butler">
-                  <TypographyCustom content="ETFW 2018's PROGRAM" size="45px" color="#fff"/>
-                    
-                  </Button>
+              <GridItem xs={12} sm={12} md={12}>
+                <NavLink
+                  to='/program'
+                  style={{
+                  textDecoration: 'none'
+                }}>
+                  <HomeButton id="program" onMouseEnter={this.handleChange} className="avenir">
+                    ETFW 2018's PROGRAM
+                  </HomeButton>
                 </NavLink>
               </GridItem>
-              <GridItem
-            xs={12}
-            sm={12}
-            md={12}
-            style={{
-            textAlign: 'center'
-          }}>
-                <NavLink to='/contact' style={{ textDecoration: 'none' }}>
-                  <Button id="contact" onMouseEnter={this.handleChange} className="butler">
-                  <TypographyCustom content="CONTACT" size="45px" color="#fff" />
-                    
-                  </Button>
+              <GridItem xs={12} sm={12} md={12}>
+                <NavLink
+                  to='/contact'
+                  style={{
+                  textDecoration: 'none'
+                }}>
+                  <HomeButton id="contact" onMouseEnter={this.handleChange} className="avenir">
+                    CONTACT
+                  </HomeButton>
                 </NavLink>
               </GridItem>
             </GridContainer>
@@ -117,8 +114,12 @@ export default class NavHome extends Component {
             textAlign: 'center',
             height: '100vh'
           }}>
-            <img src={imageSource} style={{width:'100%', maxHeight:'100%'}}>
-            </img>
+            <img
+              src={imageSource}
+              style={{
+              width: '100%',
+              maxHeight: '100%'
+            }} alt={this.state.activeLink}></img>
           </GridItem>
         </GridContainer>
       </div>

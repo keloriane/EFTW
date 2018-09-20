@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import GridContainer from '../common/grid/GridContainer';
 import GridItem from '../common/grid/GridItem';
 import NavHome from '../components/Home/NavHome';

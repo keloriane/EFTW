@@ -1,27 +1,43 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import Sidebar from '../common/sidebar/Sidebar';
-import aboutImage from '../assets/img/about.png';
-import { Socialbar } from '../common/socialbar/Socialbar';
-import Video from '../components/About/Video';
+import {Socialbar} from '../common/socialbar/Socialbar';
+// import Video from '../components/About/Video';
 import History from './../components/About/History';
-
+import GridContainer from '../common/grid/GridContainer';
+import GridItem from '../common/grid/GridItem';
+import aboutImage from '../assets/img/about.png'
 
 export default class About extends Component {
   render() {
     return (
-<div className="container__about">
-      <div className="side_bar__container">
-      
-      <Sidebar bgImage={aboutImage}
-      currentPage='ABOUT'
-      />  
-      <Socialbar />
-      </div>
-      <div className="container__about__wrapper">
-      <Video />
-      <History />
-        </div>
-      </div>
+      <GridContainer justify="center">
+
+        <GridItem xs={12} sm={10} md={10}>
+          <div className="slideInUp">
+            <History/>
+          </div>
+        </GridItem>
+
+        <GridItem sm={1} md={1} lg={1}>
+          <div
+            style={{
+            position: 'fixed',
+            width: '8.4%'
+          }}>
+            <Sidebar bgImage={aboutImage} currentPage="ABOUT"/>
+          </div>
+        </GridItem>
+        <GridItem sm={1} md={1} lg={1}>
+          <div
+            style={{
+            position: 'fixed',
+            width: '8.4%'
+          }}>
+            <Socialbar/>
+          </div>
+        </GridItem>
+
+      </GridContainer>
     )
   }
 }

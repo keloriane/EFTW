@@ -5,7 +5,7 @@ import  PropTypes  from 'prop-types';
 
 const styles ={
   fontFamily: {
-    fontFamily: 'butler',
+    fontFamily: 'avenir',
   
     
   }

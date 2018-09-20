@@ -1,38 +1,45 @@
-.social_bar__container{
-  
- background: #fff;
+.social_bar__container {
+
+  background: white;
+  // position: fixed;
   height: 100vh;
+  // float: right;
+  // max-width: 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 145px;
- 
-  .menu__item{
+
+  .menu__item {
     width: 50px;
     height: 50px;
     background-color: pink;
     margin: 0 auto;
-  }   
-
-  .logo_title__item{
-    margin: auto auto;
-    img{
-    height: 219px;
-    }
-   
   }
-    .social__container{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      .facebook,.youtube,.instagram{
-        margin: 0 auto;
-        text-align: center;
-        img{
-          width: 30px;
-          height: 30px;
-        }
+
+  .logo_title__item {
+    margin: auto auto;
+
+    img {
+      height: 219px;
+    }
+
+  }
+
+  .social__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .facebook,
+    .youtube,
+    .instagram {
+      margin: 0 auto;
+      text-align: center;
+
+      img {
+        width: 30px;
+        height: 30px;
       }
     }
+  }
 }
-

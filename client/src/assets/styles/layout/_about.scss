@@ -1,65 +1,69 @@
-.container__about{
+.video__container{
   width: 100%;
-
-  
-  .side_bar__container{
-    display: flex;
-    justify-content: flex-end;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 18%;
-  
-  }
-  
-  .video__container{
-    max-width: 960px;
-    width: 100%;
-    margin: 0 auto;
-    video{
-      width: 100%;
-    max-width: 960px;
-    }
-  }
-  .container__about__wrapper{
-    width: 80%;
-  }
 }
-.history__container__section{
-  .title__container{
-    margin-top: 82px;
-  text-align: center;
-  font-family: butler;
-  font-size: 2em;
-  text-transform: uppercase;
 
-  }
-  .text__headline{
-    margin-top: 82px;
-    margin-left: auto;
-    margin-right: auto;
-    p{
-    line-height: 42px;
-    font-size: 1em;
-    color: black;
-    }
-  }
-  .history__section{
-    margin-top: 70px;
-    display: flex;
-    justify-content: center;
-    .image__container{
+// .container__about{
+//   width: 100%;
 
-      img{
-        width: 100%;
-        max-width: 592px;
-      }
-    }
-    .text__container{
-      max-width: 595px;
-      p{
-        letter-spacing: 100;
-      }
-    }
-  }
-}
+  
+//   .side_bar__container{
+//     display: flex;
+//     justify-content: flex-end;
+//     position: fixed;
+//     right: 0;
+//     top: 0;
+//   }
+  
+//   .video__container{
+//     max-width: 960px;
+//     width: 100%;
+//     margin: 0 auto;
+//     video{
+//       width: 100%;
+//     max-width: 960px;
+//     }
+//   }
+//   .container__about__wrapper{
+//     width: 80%;
+//     margin: 0 auto;
+
+//   }
+// }
+// .history__container__section{
+//   .title__container{
+//     margin-top: 82px;
+//   text-align: center;
+//   font-family: butler;
+//   font-size: 2em;
+//   text-transform: uppercase;
+
+//   }
+//   .text__headline{
+//     margin-top: 82px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     p{
+//     line-height: 42px;
+//     font-size: 1em;
+//     color: black;
+//     }
+//   }
+//   .history__section{
+//     margin-top: 70px;
+//     display: flex;
+//     justify-content: center;
+//     .image__container{
+
+//       img{
+//         width: 100%;
+//         max-width: 592px;
+//       }
+//     }
+//     .text__container{
+//       max-width: 595px;
+//       p{
+//         letter-spacing: 100;
+//       }
+//     }
+//   }
+// }
