@@ -4,9 +4,9 @@ import GridContainer from '../../common/grid/GridContainer';
 import GridItem from '../../common/grid/GridItem';
 import poster from '../../assets/img/video_thumbnail@2x.png'
 
-
 export default class History extends Component {
   render() {
+    const video = 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4'
     return (
       <GridContainer justify="center">
           <GridItem
@@ -16,7 +16,7 @@ export default class History extends Component {
             style={{
             textAlign: 'center'
           }}>
-          <video src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" poster={poster} controls="control" style={{maxWidth:'100%'}}></video>
+          <video src={video} poster={poster} controls="control" style={{maxWidth:'100%'}}></video>
           </GridItem>
         <GridItem
           xs={10}
