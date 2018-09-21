@@ -2,6 +2,78 @@
   width: 100%;
 }
 
+.about_header {
+  font-family: avenir;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+.headline {
+  margin-top: 6%;
+  font-size: 25px;
+  font-weight: 100;
+  font-family: avenir-light;
+  letter-spacing: 2px;
+  line-height: 42px;
+}
+
+.about_content {
+  display: flex;
+  justify-content: center;
+}
+
+.about_text {
+  font-size: 25px;
+  font-weight: 100;
+  font-family: avenir-light;
+  letter-spacing: 2px;
+  line-height: 42px;
+  max-width:603px;
+}
+
+.about_header2 {
+  font-family: avenir;
+  font-size: 40px;
+  padding: 20px 0;
+  margin: 3% 0 4% 0;
+}
+
+.about_text2 {
+  font-size: 25px;
+  font-weight: 100;
+  font-family: avenir-light;
+  letter-spacing: 2px;
+  line-height: 42px;
+  max-width:603px;
+  // height: 300px;
+  margin: auto 0;
+}
+
+.download_book {
+  font-family: avenir;
+  font-size: 50px;
+  font-weight: 100;
+  padding-bottom: 20px;
+  text-align: center;
+  margin-top:6%;
+}
+
+.about_author {
+  font-family: avenir-light;
+  font-size: 30px;
+  font-weight: 100;
+  padding: 20px 0 5px 0;
+  text-align: right;
+}
+.about_role {
+  color:#5D1F18;
+  font-family: avenir-light;
+  font-size: 25px;
+  font-weight: 100;
+  padding: 0 0px 10px 0;
+  text-align: right;
+}
+
 // .container__about{
 //   width: 100%;
 
@@ -38,15 +110,13 @@
 //   text-transform: uppercase;
 
 //   }
-//   .text__headline{
-//     margin-top: 82px;
-//     margin-left: auto;
-//     margin-right: auto;
-//     p{
-//     line-height: 42px;
-//     font-size: 1em;
-//     color: black;
-//     }
+
+    // margin-left: auto;
+    // margin-right: auto;
+    // p{
+    // line-height: 42px;
+    // color: black;
+    // }
 //   }
 //   .history__section{
 //     margin-top: 70px;
@@ -66,4 +136,3 @@
 //       }
 //     }
 //   }
-// }

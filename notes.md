@@ -4,12 +4,12 @@
 - Gallery
 
 ## Kevin :
-- About page
 - Social bar : done but needs changes
 - Menu 
 - Animations
 
 ## Cali :
+- About page : almost done
 - Home page (onClick sur le lien, ouvrir le portail avec la page selectionnée)
 - Contact : done
 - Sidebar : done
