@@ -4,7 +4,8 @@ const homeButtonStyle = theme => ({
     fontSize: '45px',
     color: 'rgb(140,140,140)',
     "&:hover": {
-      color: "orange !important"
+      color: "orange !important",
+      background:"none !important"
     }
   }
 })

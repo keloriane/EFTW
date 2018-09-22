@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import Sidebar from '../common/sidebar/Sidebar.jsx';
-import highlightImage from '../assets/img/highlights.png';
+import Gallery from '../components/Highlight/Gallery/Gallery';
 
 export default class Highlight extends Component {
   render() {
     return (
       <div>
-        <Sidebar bgImage={highlightImage} currentPage="HIGHLIGHTS"/>        
+        <Gallery/>      
       </div>
     )
   }

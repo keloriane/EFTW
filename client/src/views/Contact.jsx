@@ -16,9 +16,9 @@ export default class Contact extends Component {
         <GridContainer>
 
           <GridItem xs={12} sm={10} md={10} lg={10}>
-          <GridContainer>
+          {/* <GridContainer>
             
-          </GridContainer>
+          </GridContainer> */}
             <div className="contact_container">
 
               <div className="contact_paper">

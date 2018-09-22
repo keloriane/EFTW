@@ -10,6 +10,8 @@ import About from './views/About';
 import Events from './views/Events';
 import Contact from './views/Contact';
 
+import YearGallery from './components/Highlight/Gallery/YearGallery';
+
 class App extends Component {
   render() {
     return (
@@ -17,10 +19,11 @@ class App extends Component {
           <div className="app">
           <Switch>
             <Route exact path="/" component={Home}></Route>
-            <Route path="/highlights" component={Highlight}></Route>
-            <Route path="/program" component={Events}></Route>
-            <Route path="/contact" component={Contact}></Route>
-            <Route path="/about" component={About}></Route>
+            <Route exact path="/highlights" component={Highlight}></Route>
+            <Route exact path="/highlights/:year" component={YearGallery}></Route>
+            <Route exact path="/program" component={Events}></Route>
+            <Route exact path="/contact" component={Contact}></Route>
+            <Route exact path="/about" component={About}></Route>
           </Switch>
           </div>
         </Router>

@@ -5,6 +5,7 @@ import cerina from './../../assets/img/CERINA@2x.png'
 import GridContainer from '../../common/grid/GridContainer';
 import GridItem from '../../common/grid/GridItem';
 import poster from '../../assets/img/video_thumbnail@2x.png'
+import bookmark from '../../assets/img/bookmark@2x.png'
 import {Divider, Button} from '@material-ui/core';
 
 export default class History extends Component {
@@ -19,7 +20,7 @@ export default class History extends Component {
             controls="control"
             style={{
             maxWidth: '100%',
-            margin: '7.5% 0'
+            margin: '7% 0 7.5% 0'
           }}></video>
         </GridItem>
 
@@ -116,19 +117,27 @@ export default class History extends Component {
             marginBottom: '5%'
           }}>
             <GridItem xs={10} sm={10} md={10}>
+            <GridContainer justify="center">
+              <GridItem xs={12} sm={12} md={12}>
               <p className="download_book">Download the ETFWB’s Book to learn more
                 <br/>
                 about our spirit</p>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12}>
               <div style={{
                 textAlign: 'center'
               }}>
                 <Button
                   variant="outlined"
                   style={{
-                  maxWidth: '390px',
-                  maxHeight: '78px'
-                }}>THE BOOK</Button>
+                    minWidth: '250px',
+                    maxWidth: '390px',
+                    height: '78px'
+                }}><span className="download">THE BOOK</span><img src={bookmark} className="bookmark" alt=""></img></Button>
               </div>
+              </GridItem>
+            </GridContainer>
+             
             </GridItem>
           </GridContainer>
         </GridItem>
