@@ -11,7 +11,7 @@ export default class YearGallery extends Component {
   render() {
     console.log(this.props)
     return (
-      <div>
+      <div className="gallery_container">
         <GridContainer>
 
           <GridItem xs={12} sm={10} md={10} lg={10}>

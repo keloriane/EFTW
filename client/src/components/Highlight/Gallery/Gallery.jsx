@@ -10,7 +10,7 @@ import { Hidden } from '@material-ui/core';
 export default class Gallery extends Component {
   render() {
     return (
-      <div>
+      <div className="gallery_container">
         <GridContainer>
 
           <GridItem xs={12} sm={10} md={10} lg={10}>
@@ -18,8 +18,8 @@ export default class Gallery extends Component {
 
               <div className="gallery_paper">
               <NavGallery/>
-               
               </div>
+              
             </div>
           </GridItem>
 

@@ -1,91 +1,98 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import firstImage from '../../../assets/img/CASH.png';
+
 import {NavLink} from 'react-router-dom';
+
+import bg2017 from '../../../assets/img/2017@2x.png';
+import bg2016 from '../../../assets/img/2016@2x.png';
+import bg2015 from '../../../assets/img/2015@2x.png';
+import bg2014 from '../../../assets/img/2014@2x.png';
+import bg2013 from '../../../assets/img/2013@2x.png';
+import bg2012 from '../../../assets/img/2012@2x.png';
+
 import {images2017} from '../../../assets/mocks/images.js';
-const styles = theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing.unit,
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-  img: {
-    maxWidth: '100%',
-    maxHeight: '419px'
-  }
-});
 
 function FirstRow(props) {
-  const { classes } = props;
-
+  const yearText = {
+    color: 'white',
+    fontSize: '40px',
+    fontWeight: '85',
+    textDecoration: 'none'
+  }
   return (
     <React.Fragment>
-      <Grid item xs={6} sm={4} md={4}>
-        <NavLink to={
-        {
-          pathname:`/highlights/2017`,
+      <Grid item xs={12} sm={4} md={4}>
+        <NavLink
+          style={yearText}
+          to={{
+          pathname: `/highlights/2017`,
           state: {
-            images:images2017,
+            images: images2017
           }
-        }
-    }>
-        <img src={firstImage} className={classes.img} alt="2017"></img>
+        }}>
+          <div className="container">
+          <img src={bg2017} className="bgImage"></img>
+          <div className="centered">2017</div>
+          </div>
+
         </NavLink>
       </Grid>
-      <Grid item xs={6} sm={4} md={4}>
-      <NavLink to="/highlights/2016">
-        <img src={firstImage} className={classes.img} alt="2016"></img>
+      <Grid item xs={12} sm={4} md={4}>
+        <NavLink style={yearText} to="/highlights/2016">
+
+          <div className="container">
+          <img src={bg2016} className="bgImage"></img>
+          <div className="centered">2016</div>
+          </div>
         </NavLink>
       </Grid>
-      <Grid item xs={6} sm={4} md={4}>
-      <NavLink to="/highlights/2015">
-        <img src={firstImage} className={classes.img} alt="2015"></img>
+      <Grid item xs={12} sm={4} md={4}>
+        <NavLink style={yearText} to="/highlights/2015">
+        <div className="container">
+          <img src={bg2015} className="bgImage"></img>
+          <div className="centered">2015</div>
+          </div>
         </NavLink>
       </Grid>
-      <Grid item xs={6} sm={4} md={4}>
-      <NavLink to="/highlights/2014">
-        <img src={firstImage} className={classes.img} alt="2014"></img>
+      <Grid item xs={12} sm={4} md={4}>
+        <NavLink style={yearText} to="/highlights/2014">
+        <div className="container">
+          <img src={bg2014} className="bgImage"></img>
+          <div className="centered">2014</div>
+          </div>
         </NavLink>
       </Grid>
-      <Grid item xs={6} sm={4} md={4}>
-      <NavLink to="/highlights/2013">
-        <img src={firstImage} className={classes.img} alt="2013"></img>
+      <Grid item xs={12} sm={4} md={4}>
+        <NavLink style={yearText} to="/highlights/2013">
+        <div className="container">
+          <img src={bg2013} className="bgImage"></img>
+          <div className="centered">2013</div>
+          </div>
         </NavLink>
       </Grid>
-      <Grid item xs={6} sm={4} md={4}>
-      <NavLink to="/highlights/2012">
-        <img src={firstImage} className={classes.img} alt="2012"></img>
+      <Grid item xs={12} sm={4} md={4}>
+        <NavLink style={yearText} to="/highlights/2012">
+        <div className="container">
+          <img src={bg2012} className="bgImage"></img>
+          <div className="centered">2012</div>
+          </div>
         </NavLink>
       </Grid>
     </React.Fragment>
   );
 }
 
-FirstRow.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
 function NavGallery(props) {
-  const { classes } = props;
 
   return (
-    <div className={classes.root}>
+    <div>
       <Grid container spacing={8} justify="center">
         <Grid item xs={12} sm={12} md={12} container spacing={24}>
-          <FirstRow classes={classes} />
+          <FirstRow/>
         </Grid>
       </Grid>
     </div>
   );
 }
 
-NavGallery.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(NavGallery);
+export default NavGallery;
