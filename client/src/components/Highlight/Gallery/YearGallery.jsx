@@ -3,13 +3,14 @@ import Sidebar from '../../../common/sidebar/Sidebar';
 import galleryImage from '../../../assets/img/highlights.png';
 import GridContainer from '../../../common/grid/GridContainer';
 import GridItem from '../../../common/grid/GridItem';
-import NavGallery from './NavGallery';
 import {Socialbar} from '../../../common/socialbar/Socialbar';
 import { Hidden } from '@material-ui/core';
 import Years from './Years';
 export default class YearGallery extends Component {
   render() {
-    console.log(this.props)
+    // Create new array with URLs for images
+    let imgUrls = this.props.location.state.images;
+    console.log(this.props);
     return (
       <div className="gallery_container">
         <GridContainer>
@@ -18,7 +19,7 @@ export default class YearGallery extends Component {
             <div className="gallery_container">
 
               <div className="gallery_paper">
-              <Years images={this.props.location.state.images}/>
+             <Years imgUrls={imgUrls}/>
               </div>
             </div>
           </GridItem>

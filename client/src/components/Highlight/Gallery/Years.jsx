@@ -1,90 +1,67 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import {withRouter} from 'react-router-dom';
+import React, {Component} from 'react';
+import GalleryModal from './GalleryModal';
+import GalleryImage from './GalleryImage';
 import Grid from '@material-ui/core/Grid';
-import firstImage from '../../../assets/img/CASH.png';
-import {NavLink} from 'react-router-dom';
-const styles = theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing.unit,
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-  img: {
-    maxWidth: '100%',
-    maxHeight: '419px'
+
+// Component for gallery
+export default class Years extends Component {
+  
+  state = {
+    showModal: false,
+    url: '',
+    index: 0
   }
-});
+  
+  // Function for opening modal dialog
+  openModal = (url, index, e) => {
+    this.setState({showModal: true, url: url, index: index})
+  };
 
-function FirstRow(props) {
-  const { classes } = props;
+  // Function for closing modal dialog
+  closeModal = () => {
+    this.setState({showModal: false, url: ''})
+  }
 
-  return (
-    <React.Fragment>
-      <Grid item xs={4} sm={2} md={2}>
-        <NavLink to="/highlights/2017">
-        <img src={firstImage} className={classes.img} alt="2017"></img>
-        </NavLink>
-      </Grid>
-      <Grid item xs={4} sm={2} md={2}>
-      <NavLink to="/highlights/2016">
-        <img src={firstImage} className={classes.img} alt="2016"></img>
-        </NavLink>
-      </Grid>
-      <Grid item xs={4} sm={2} md={2}>
-      <NavLink to="/highlights/2015">
-        <img src={firstImage} className={classes.img} alt="2015"></img>
-        </NavLink>
-      </Grid>
-      <Grid item xs={4} sm={2} md={2}>
-      <NavLink to="/highlights/2012">
-        <img src={firstImage} className={classes.img} alt="2012"></img>
-        </NavLink>
-      </Grid>
-      <Grid item xs={4} sm={2} md={2}>
-      <NavLink to="/highlights/2013">
-        <img src={firstImage} className={classes.img} alt="2013"></img>
-        </NavLink>
-      </Grid>
-      <Grid item xs={4} sm={2} md={2}>
-      <NavLink to="/highlights/2012">
-        <img src={firstImage} className={classes.img} alt="2012"></img>
-        </NavLink>
-      </Grid>
-    </React.Fragment>
-  );
+  render() {
+    let imgUrls = this.props.imgUrls;
+    let content = imgUrls.map((url, index) => {
+      return (
+        <Grid key={index} item xs={4} sm={2} md={2}>
+        <div >
+          <div className='gallery-card'>
+            <GalleryImage
+              className='gallery-thumbnail'
+              src={url}
+              alt={'Image number ' + (index + 1)}/>
+
+            <span
+              className='card-icon-open fa fa-expand'
+              value={url}
+              onClick={(e) => this.openModal(url, index, e)}></span>
+          </div>
+        </div>
+        </Grid>
+      )
+    })
+
+    return (
+      <div>
+           {/* <div refs='gallery-container' className='container-fluid gallery-container'> */}
+        <Grid container spacing={8} justify="center">
+          <Grid item xs={12} sm={12} md={12} container spacing={8}>
+          {content}
+          </Grid>
+        </Grid>
+
+        <GalleryModal
+          onClick={this.closeModal}
+          isOpen={this.state.showModal}
+          src={this.state.url}
+          imgUrls={this.props.imgUrls}
+          index={this.state.index}/>
+           {/* </div> */}
+          </div>
+    )
+  }
+
 }
-
-FirstRow.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-function Years(props) {
-  const { classes } = props;
-  console.log("from years", props);
-  return (
-    <div className={classes.root}>
-      <Grid container spacing={8} justify="center">
-        <Grid item xs={12} sm={12} md={12} container spacing={24}>
-          <FirstRow classes={classes} />
-        </Grid>
-        <Grid item xs={12} sm={12} md={12} container spacing={24}>
-          <FirstRow classes={classes} />
-        </Grid>
-        <Grid item xs={12} sm={12} md={12} container spacing={24}>
-          <FirstRow classes={classes} />
-        </Grid>
-      </Grid>
-    </div>
-  );
-}
-
-Years.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withRouter(withStyles(styles)(Years));
