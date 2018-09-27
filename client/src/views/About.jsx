@@ -8,6 +8,7 @@ import GridItem from '../common/grid/GridItem';
 import aboutImage from '../assets/img/about.png'
 import { Hidden } from '@material-ui/core';
 import Menu from '../components/Menu/Menu';
+import Footer from '../common/footer/Footer';
 
 export default class About extends Component {
   
@@ -30,6 +31,7 @@ export default class About extends Component {
         <GridItem xs={12} sm={10} md={10}>
           <div className="slideInUp">
             <History/>
+            <Footer/>
           </div>
         </GridItem>
         <Hidden only="xs">

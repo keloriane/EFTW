@@ -6,6 +6,8 @@
   font-family: avenir;
   font-size: 40px;
   padding-bottom: 20px;
+  width: 100%;
+  text-align: center;
 }
 
 .headline {
@@ -15,6 +17,13 @@
   font-family: avenir-light;
   letter-spacing: 2px;
   line-height: 42px;
+  text-align: justify;
+}
+
+@media screen and (max-width:375px){
+  .headline{
+    font-size: 12px;
+  }
 }
 
 .about_content {
@@ -28,7 +37,7 @@
   font-family: avenir-light;
   letter-spacing: 2px;
   line-height: 42px;
-  max-width:603px;
+  // max-width:603px;
 }
 
 .about_header2 {
@@ -44,7 +53,7 @@
   font-family: avenir-light;
   letter-spacing: 2px;
   line-height: 42px;
-  max-width:603px;
+  // max-width:603px;
   // height: 300px;
   margin: auto 0;
 }
@@ -58,11 +67,24 @@
   margin-top:6%;
 }
 
-.download {
-  font-family: avenir;
+.btn_highlights {
+  width: 390px;
+  height: 78px;
+  background-color: #fff;
+  justify-content: center;
+  align-content: center;
+  text-transform: uppercase;
   font-size: 25px;
-  font-weight: 100;
+  border: 1px solid rgba(0,0,0,0.2);
 }
+
+@media screen and (max-width:375px){
+  .btn_highlights{
+    width: 150px;
+  }
+}
+
+
 
 .about_author {
   font-family: avenir-light;
@@ -85,66 +107,3 @@
   height: 40px;
   margin-left: 10px;
 }
-
-// .container__about{
-//   width: 100%;
-
-  
-//   .side_bar__container{
-//     display: flex;
-//     justify-content: flex-end;
-//     position: fixed;
-//     right: 0;
-//     top: 0;
-//   }
-  
-//   .video__container{
-//     max-width: 960px;
-//     width: 100%;
-//     margin: 0 auto;
-//     video{
-//       width: 100%;
-//     max-width: 960px;
-//     }
-//   }
-//   .container__about__wrapper{
-//     width: 80%;
-//     margin: 0 auto;
-
-//   }
-// }
-// .history__container__section{
-//   .title__container{
-//     margin-top: 82px;
-//   text-align: center;
-//   font-family: butler;
-//   font-size: 2em;
-//   text-transform: uppercase;
-
-//   }
-
-    // margin-left: auto;
-    // margin-right: auto;
-    // p{
-    // line-height: 42px;
-    // color: black;
-    // }
-//   }
-//   .history__section{
-//     margin-top: 70px;
-//     display: flex;
-//     justify-content: center;
-//     .image__container{
-
-//       img{
-//         width: 100%;
-//         max-width: 592px;
-//       }
-//     }
-//     .text__container{
-//       max-width: 595px;
-//       p{
-//         letter-spacing: 100;
-//       }
-//     }
-//   }

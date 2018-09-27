@@ -1,4 +1,4 @@
-const homeButtonStyle = theme => ({
+const homeButtonStyle = () => ({
   root: {
     fontFamily: 'avenir',
     fontSize: '45px',

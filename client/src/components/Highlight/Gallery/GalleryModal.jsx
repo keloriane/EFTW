@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import GridContainer from '../../../common/grid/GridContainer';
 import GridItem from '../../../common/grid/GridItem';
+import { Hidden } from '@material-ui/core';
 // Component for gallery modal
 
 class GalleryModal extends Component {
@@ -35,6 +36,7 @@ class GalleryModal extends Component {
             newImage = img;
             newIndex = i;
           }
+          return img;
         })
       if (newImage !== '' && newIndex !== null) {
         this.setState({src: newImage, index: newIndex})
@@ -59,6 +61,7 @@ class GalleryModal extends Component {
           newImage = img;
           newIndex = i;
         }
+        return img;
       })
       if (newImage !== '' && newIndex !== null) {
         this.setState({src: newImage, index: newIndex})
@@ -84,12 +87,8 @@ class GalleryModal extends Component {
         name={this.props.name}>
         <div className='modal-body'>
           <GridContainer justify="center" alignItems="center">
-            <GridItem xs={12} sm={12} md={12}>
-              <a className='modal-close' onClick={this.props.onClick}>
-                <span className='fa fa-times'></span>
-              </a>
-            </GridItem>
-            <GridItem xs={2} sm={2} md={2}>
+          <Hidden only="xs">
+            <GridItem sm={2} md={2}>
               <button
                 onClick={this.prevImg}
                 style={{
@@ -97,15 +96,18 @@ class GalleryModal extends Component {
               }}>LEFT</button>
 
             </GridItem>
-            <GridItem xs={8} sm={8} md={8}>
+          </Hidden>
+            <GridItem xs={12} sm={8} md={8}>
               <img
                 style={{
                 height: '100%',
                 width: '100%'
               }}
-                src={this.state.src}/>
+                src={this.state.src}
+                alt={this.state.src}/>
             </GridItem>
-            <GridItem xs={2} sm={2} md={2}>
+            <Hidden only="xs">
+            <GridItem sm={2} md={2}>
               <div>
                 <button
                   onClick={this.nextImg}
@@ -114,6 +116,7 @@ class GalleryModal extends Component {
                 }}>RIGHT</button>
               </div>
             </GridItem>
+            </Hidden>
           </GridContainer>
 
         </div>

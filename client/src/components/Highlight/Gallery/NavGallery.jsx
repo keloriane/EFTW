@@ -36,7 +36,7 @@ function FirstRow(props) {
           }
         }}>
           <div className="container">
-          <img src={bg2017} className="bgImage"></img>
+          <img src={bg2017} className="bgImage" alt="background2017"></img>
           <div className="centered">2017</div>
           </div>
 
@@ -52,7 +52,7 @@ function FirstRow(props) {
         }}>
 
           <div className="container">
-          <img src={bg2016} className="bgImage"></img>
+          <img src={bg2016} className="bgImage" alt="background 2016"></img>
           <div className="centered">2016</div>
           </div>
         </NavLink>
@@ -66,7 +66,7 @@ function FirstRow(props) {
           }
         }}>
         <div className="container">
-          <img src={bg2015} className="bgImage"></img>
+          <img src={bg2015} className="bgImage" alt="background 2015"></img>
           <div className="centered">2015</div>
           </div>
         </NavLink>
@@ -80,7 +80,7 @@ function FirstRow(props) {
           }
         }}>
         <div className="container">
-          <img src={bg2014} className="bgImage"></img>
+          <img src={bg2014} className="bgImage" alt="background 2014"></img>
           <div className="centered">2014</div>
           </div>
         </NavLink>
@@ -94,7 +94,7 @@ function FirstRow(props) {
           }
         }}>
         <div className="container">
-          <img src={bg2013} className="bgImage"></img>
+          <img src={bg2013} className="bgImage" alt="background 2013"></img>
           <div className="centered">2013</div>
           </div>
         </NavLink>
@@ -108,7 +108,7 @@ function FirstRow(props) {
           }
         }}>
         <div className="container">
-          <img src={bg2012} className="bgImage"></img>
+          <img src={bg2012} className="bgImage" alt="background 2012"></img>
           <div className="centered">2012</div>
         </div>
         </NavLink>
