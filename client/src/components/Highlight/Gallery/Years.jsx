@@ -19,7 +19,7 @@ export default class Years extends Component {
 
   // Function for closing modal dialog
   closeModal = () => {
-    this.setState({showModal: false, url: ''})
+    this.setState({showModal: false, url: '', index:0})
   }
 
   render() {
@@ -47,8 +47,8 @@ export default class Years extends Component {
     return (
       <div>
            {/* <div refs='gallery-container' className='container-fluid gallery-container'> */}
-        <Grid container spacing={8} justify="center">
-          <Grid item xs={12} sm={12} md={12} container spacing={8}>
+        <Grid container justify="center">
+          <Grid item xs={12} sm={12} md={12} container className="gallery_paper_content">
           {content}
           </Grid>
         </Grid>

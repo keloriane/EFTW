@@ -11,6 +11,7 @@ import Events from './views/Events';
 import Contact from './views/Contact';
 
 import YearGallery from './components/Highlight/Gallery/YearGallery';
+import Menu from './components/Menu/Menu';
 
 class App extends Component {
   render() {

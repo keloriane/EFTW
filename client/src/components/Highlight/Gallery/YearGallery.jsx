@@ -3,7 +3,7 @@ import Sidebar from '../../../common/sidebar/Sidebar';
 import galleryImage from '../../../assets/img/highlights.png';
 import GridContainer from '../../../common/grid/GridContainer';
 import GridItem from '../../../common/grid/GridItem';
-import {Socialbar} from '../../../common/socialbar/Socialbar';
+import Socialbar from '../../../common/socialbar/Socialbar';
 import { Hidden } from '@material-ui/core';
 import Years from './Years';
 export default class YearGallery extends Component {
