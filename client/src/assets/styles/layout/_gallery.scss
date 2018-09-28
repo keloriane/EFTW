@@ -14,18 +14,19 @@
     align-items: center;
 
     .gallery_paper_content{
-      margin-top:20px;
       background: #FFF4F7 !important;
     }
     .container {
       position: relative;
       text-align: center;
+      margin: 8px 10px;
     }
     .centered {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      
     }
     .opacity {
       position:absolute;
@@ -35,8 +36,8 @@
       // z-index: 999;
     }
     .bgImage {
-      height: 100%;
-      width: 100%;
+      max-height:100%;
+      max-width: 100%;
       // border: solid 2px black;
     }
   }
@@ -45,5 +46,15 @@
 @media screen and (min-width:590px){
   .gallery_container{
     height: 100vh;
+  }
+}
+@media screen and (max-width:390px){
+  .bgImage {
+    height:250px;
+    width: 250px;
+    // border: solid 2px black;
+  }
+  .container {
+    margin: 8% 8px !important;
   }
 }

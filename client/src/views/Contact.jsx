@@ -7,6 +7,7 @@ import GridItem from '../common/grid/GridItem';
 import Socialbar from '../common/socialbar/Socialbar';
 import { Hidden } from '@material-ui/core';
 import Menu from '../components/Menu/Menu';
+import Footer from '../common/footer/Footer';
 
 
 export default class Contact extends Component {

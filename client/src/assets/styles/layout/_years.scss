@@ -24,12 +24,22 @@ body {
 .gallery-card {
   position: relative;
   overflow: hidden;
-  margin-bottom: 1.875rem;
+  padding: 10px;
 }
 
 .gallery-thumbnail {
   max-width: 100%;
-  height: auto;
+  height: 200px;
+}
+
+.view-image {
+  width: 100%;
+}
+
+@media screen and (max-width:360px){
+  .view-image {
+    max-width: 300px !important;
+  }
 }
 
 .card-icon-open {

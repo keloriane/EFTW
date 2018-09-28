@@ -4,7 +4,7 @@ import GridContainer from '../../../common/grid/GridContainer';
 import GridItem from '../../../common/grid/GridItem';
 import { Hidden } from '@material-ui/core';
 // Component for gallery modal
-
+import Swipeable from 'react-swipeable';
 class GalleryModal extends Component {
   state = {
     imgUrls: [],
@@ -98,19 +98,29 @@ class GalleryModal extends Component {
             </GridItem>
           </Hidden>
             <GridItem xs={12} sm={8} md={8}>
+            <Swipeable
+              className="callout secondary"
+              style={{ display: "inline-block", touchAction: 'none', padding: ".5rem" }}
+              trackMouse
+              preventDefaultTouchmoveEvent
+              onSwipedLeft={(e)=>this.nextImg(e)}
+              onSwipedRight={(e)=>this.prevImg(e)}
+            >
+              <div>
               <img
-                style={{
-                height: '100%',
-                width: '100%'
-              }}
+                className="view-image"
                 src={this.state.src}
                 alt={this.state.src}/>
+              </div>
+            </Swipeable>
+              
             </GridItem>
             <Hidden only="xs">
             <GridItem sm={2} md={2}>
               <div>
                 <button
                   onClick={this.nextImg}
+                  onSwipedRight={this.nextImg}
                   style={{
                   float: 'right'
                 }}>RIGHT</button>

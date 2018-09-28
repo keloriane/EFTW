@@ -26,8 +26,8 @@ export default class Years extends Component {
     let imgUrls = this.props.imgUrls;
     let content = imgUrls.map((url, index) => {
       return (
-        <Grid key={index} item xs={4} sm={2} md={2}>
-        <div >
+        <Grid key={index} item xs={6} sm={2} md={2}>
+        <div>
           <div className='gallery-card'>
             <GalleryImage
               className='gallery-thumbnail'
@@ -48,8 +48,10 @@ export default class Years extends Component {
       <div>
            {/* <div refs='gallery-container' className='container-fluid gallery-container'> */}
         <Grid container justify="center">
-          <Grid item xs={12} sm={12} md={12} container className="gallery_paper_content">
+          <Grid item xs={10} sm={10} md={10} container className="gallery_paper_content">
+          <Grid container >
           {content}
+          </Grid>
           </Grid>
         </Grid>
 
