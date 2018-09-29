@@ -6,7 +6,7 @@ import GridItem from '../../../common/grid/GridItem';
 import Socialbar from '../../../common/socialbar/Socialbar';
 import { Hidden } from '@material-ui/core';
 import Years from './Years';
-import {Link} from 'react-router-dom';
+
 export default class YearGallery extends Component {
   render() {
     // Create new array with URLs for images

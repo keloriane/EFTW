@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import GridContainer from '../../../common/grid/GridContainer';
 import GridItem from '../../../common/grid/GridItem';
-import { Hidden, Button } from '@material-ui/core';
+import { Hidden } from '@material-ui/core';
 import RightArrow from '../../../assets/img/next@2x.png'
 import LeftArrow from '../../../assets/img/previous@2x.png'
 // Component for gallery modal
@@ -92,7 +92,7 @@ class GalleryModal extends Component {
           <Hidden only="xs">
             <GridItem sm={3} md={3}>
             <div className="arrowWrapper" onClick={this.prevImg}>
-              <img style={{width:'34.07px', height:'64.51', float:'left'}} src={LeftArrow}></img>
+              <img style={{width:'34.07px', height:'64.51', float:'left'}} src={LeftArrow} alt="left"></img>
             </div>
 
             </GridItem>
@@ -118,7 +118,7 @@ class GalleryModal extends Component {
             <Hidden only="xs">
             <GridItem sm={3} md={3}>
               <div className="arrowWrapper" onClick={this.nextImg}>
-                <img style={{width:'34.07px', height:'64.51', float:'right'}} src={RightArrow}></img>
+                <img style={{width:'34.07px', height:'64.51', float:'right'}} src={RightArrow} alt="next"></img>
               </div>
             </GridItem>
             </Hidden>

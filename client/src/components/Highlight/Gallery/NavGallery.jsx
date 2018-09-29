@@ -28,7 +28,7 @@ function FirstRow(props) {
     <React.Fragment>
       <Grid item xs={12} sm={4} md={4}>
 
-        <div className="container">
+        <div className="container slideInRightFast">
           <NavLink
             style={yearText}
             to={{
@@ -45,7 +45,7 @@ function FirstRow(props) {
       </Grid>
       <Grid item xs={12} sm={4} md={4}>
 
-        <div className="container">
+      <div className="container slideInRightMedium">
           <NavLink
             style={yearText}
             to={{
@@ -61,7 +61,7 @@ function FirstRow(props) {
       </Grid>
       <Grid item xs={12} sm={4} md={4}>
 
-        <div className="container">
+        <div className="container slideInRightSlow">
           <NavLink
             style={yearText}
             to={{
@@ -76,7 +76,7 @@ function FirstRow(props) {
         </div>
       </Grid>
       <Grid item xs={12} sm={4} md={4}>
-        <div className="container">
+        <div className="container slideInRightFast">
           <NavLink
             style={yearText}
             to={{
@@ -91,7 +91,7 @@ function FirstRow(props) {
         </div>
       </Grid>
       <Grid item xs={12} sm={4} md={4}>
-        <div className="container">
+        <div className="container slideInRightMedium">
           <NavLink
             style={yearText}
             to={{
@@ -107,7 +107,7 @@ function FirstRow(props) {
       </Grid>
       <Grid item xs={12} sm={4} md={4}>
 
-        <div className="container">
+        <div className="container slideInRightSlow">
           <NavLink
             style={yearText}
             to={{
