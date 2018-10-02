@@ -7,6 +7,7 @@ import GridItem from '../common/grid/GridItem';
 import Socialbar from '../common/socialbar/Socialbar';
 import { Hidden } from '@material-ui/core';
 import Menu from '../components/Menu/Menu';
+import MenuGrid from '../components/Menu/MenuGrid';
 import Footer from '../common/footer/Footer';
 
 
@@ -24,7 +25,7 @@ export default class Contact extends Component {
   }
 
   render() {
-    let content = this.state.isOpen ? <Menu closed={this.closed}/> : (<GridContainer>
+    let content = this.state.isOpen ? <MenuGrid closed={this.closed}/> : (<GridContainer>
 
       <GridItem xs={12} sm={10} md={10} lg={10}>
         <div className="contact_container">
