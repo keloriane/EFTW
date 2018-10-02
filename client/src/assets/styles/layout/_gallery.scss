@@ -6,16 +6,18 @@
   justify-content: center;
   align-items: center;
 
+  .nav_gallery_paper{
+    align-items: center;
+    }
   .gallery_paper {
     width: 1223px;
-    height: 80%;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-
     .gallery_paper_content{
       background: #FFF4F7 !important;
     }
+    // ANIMATION GALLERIE
     .container {
       position: relative;
       text-align: center;
@@ -43,6 +45,12 @@
   }
 }
 
+/* @media screen and (min-width:590px){
+  .gallery_paper_container{
+    background: red;
+    height: 100vh;
+  }
+} */
 @media screen and (min-width:590px){
   .gallery_container{
     height: 100vh;

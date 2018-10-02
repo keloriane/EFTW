@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import GalleryModal from './GalleryModal';
 import GalleryImage from './GalleryImage';
 import Grid from '@material-ui/core/Grid';
+import { Link } from 'react-router-dom';
 
 // Component for gallery
 export default class Years extends Component {
@@ -26,7 +27,7 @@ export default class Years extends Component {
     let imgUrls = this.props.imgUrls;
     let content = imgUrls.map((url, index) => {
       return (
-        <Grid key={index} item xs={6} sm={2} md={2}>
+      <div key={index}>
         <div>
           <div className='gallery-card'>
             <GalleryImage
@@ -40,16 +41,21 @@ export default class Years extends Component {
               onClick={(e) => this.openModal(url, index, e)}></span>
           </div>
         </div>
-        </Grid>
+        </div>
       )
     })
 
     return (
       <div>
            {/* <div refs='gallery-container' className='container-fluid gallery-container'> */}
-        <Grid container justify="center">
-          <Grid item xs={10} sm={10} md={10} container className="gallery_paper_content">
-          <Grid container >
+        <Grid container justify="center" style={{backgroundColor:'#FFF4F7'}}>
+        <Link to="/highlights">
+              <div style={{position:'absolute', top:170, left:5, height:'50px', width:'50px', background:'red'}}>
+              </div>
+            </Link>
+          <Grid item xs={10} sm={10} md={10} container className="gallery_paper_content" >
+          <Grid item xs={12} sm={12} md={12} style={{textAlign:'center', padding:'100px 0px', fontSize:'30px', fontFamily:'Helvetica', fontWeight:'bold'}}> EFTWB 2018 </Grid>
+          <Grid container justify="space-around">
           {content}
           </Grid>
           </Grid>

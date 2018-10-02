@@ -26,11 +26,56 @@
   }
 }
 
-.slideInLeft {
+.slideInLeftFast {
   animation-name: slideInLeft;
-  animation-duration:0.5s;
+  animation-duration:0.2s;
+  transition: 1s ease-in;
 }
 
+.slideInLeftMedium {
+  animation-name: slideInLeft;
+  animation-duration:0.5s;
+  transition: 1s ease-in-out;
+
+}
+
+.slideInLeftSlow {
+  animation-name: slideInLeft;
+  animation-duration:0.7s;
+  transition: 1s ease-in-out;
+
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRightFast {
+  animation-name: slideInRight;
+  animation-duration:0.2s;
+  transition: 1s ease-in;
+}
+
+.slideInRightMedium {
+  animation-name: slideInRight;
+  animation-duration:0.5s;
+  transition: 1s ease-in-out;
+
+}
+
+.slideInRightSlow {
+  animation-name: slideInRight;
+  animation-duration:0.7s;
+  transition: 1s ease-in-out;
+
+}
 @keyframes slideInDown {
   from {
     transform: translate3d(0, -100%, 0);

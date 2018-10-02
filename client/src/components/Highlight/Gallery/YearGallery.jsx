@@ -6,6 +6,7 @@ import GridItem from '../../../common/grid/GridItem';
 import Socialbar from '../../../common/socialbar/Socialbar';
 import { Hidden } from '@material-ui/core';
 import Years from './Years';
+
 export default class YearGallery extends Component {
   render() {
     // Create new array with URLs for images
@@ -14,10 +15,13 @@ export default class YearGallery extends Component {
     return (
       <div className="gallery_container">
         <GridContainer>
-
+        <Hidden only={['sm', 'md', 'lg']}>
+                <GridItem xs={12} style={{backgroundColor:'blue', height:'70px'}}>
+                blabla
+                </GridItem>
+              </Hidden>
           <GridItem xs={12} sm={10} md={10} lg={10}>
-            <div className="gallery_container">
-
+            <div className="gallery_container" >
               <div className="gallery_paper">
              <Years imgUrls={imgUrls}/>
               </div>

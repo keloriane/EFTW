@@ -29,7 +29,7 @@ export default class Gallery extends Component {
         <GridItem xs={12} sm={10} md={10} lg={10}>
           <div className="gallery_container">
 
-            <div className="gallery_paper">
+            <div className="gallery_paper nav_gallery_paper">
             <NavGallery/>
             </div>
             
