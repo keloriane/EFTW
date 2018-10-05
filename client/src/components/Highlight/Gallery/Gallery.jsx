@@ -6,7 +6,7 @@ import GridItem from '../../../common/grid/GridItem';
 import NavGallery from './NavGallery';
 import Socialbar from '../../../common/socialbar/Socialbar';
 import { Hidden } from '@material-ui/core';
-import Menu from '../../Menu/Menu';
+import Menu from '../../Menu/MenuGrid';
 export default class Gallery extends Component {
   state = {
     isOpen: false

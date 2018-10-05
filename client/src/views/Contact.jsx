@@ -6,7 +6,7 @@ import GridItem from '../common/grid/GridItem';
 
 import Socialbar from '../common/socialbar/Socialbar';
 import { Hidden } from '@material-ui/core';
-import Menu from '../components/Menu/Menu';
+import Menu from '../components/Menu/MenuGrid';
 import Footer from '../common/footer/Footer';
 
 

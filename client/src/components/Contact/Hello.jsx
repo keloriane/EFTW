@@ -1,10 +1,12 @@
-import React from 'react'
-import ContactCard from '../../common/ContactCard/ContactCard';
+import React, { Component } from 'react'
 
-export const Hello = () => {
-  return (
-    <div>
-      <ContactCard contactTitle="Hello" contactInfos={(<div>MAIL TO HERE</div>)}/>
-    </div>
-  )
+export default class Hello extends Component {
+  render() {
+    return (
+      <div>
+        
+      </div>
+    )
+  }
 }
+

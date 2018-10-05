@@ -7,7 +7,7 @@ import GridContainer from '../common/grid/GridContainer';
 import GridItem from '../common/grid/GridItem';
 import aboutImage from '../assets/img/about.png'
 import { Hidden } from '@material-ui/core';
-import Menu from '../components/Menu/Menu';
+import Menu from '../components/Menu/MenuGrid';
 import Footer from '../common/footer/Footer';
 
 export default class About extends Component {

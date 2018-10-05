@@ -4,9 +4,9 @@ import Socialbar from '../common/socialbar/Socialbar';
 import Agenda from '../components/Events/Agenda';
 import GridContainer from '../common/grid/GridContainer';
 import GridItem from '../common/grid/GridItem';
-import programImage from '../assets/img/program.png'
+import programImage from '../assets/img/side_agenda.png'
 import { Hidden } from '@material-ui/core';
-import Menu from '../components/Menu/Menu';
+import Menu from '../components/Menu/MenuGrid';
 import Footer from '../common/footer/Footer';
 
 export default class Program extends Component {
@@ -25,22 +25,22 @@ export default class Program extends Component {
 
   render() {
     let content = this.state.isOpen ? <Menu closed={this.closed}/> : (
-      <GridContainer justify="center" style={{backgroundColor:'blue', position:'relative'}}>
+      <GridContainer justify="center" style={{backgroundColor:'#FFFAF4', position:'relative'}}>
 
-        <GridItem xs={12} sm={10} md={10}>
+        <GridItem xs={12} sm={12} md={10}>
           <div className="events-content">
             <Agenda/>
             {/* <Footer/> */}
           </div>
         </GridItem>
-        <Hidden only="xs">
+        <Hidden only={["xs", "sm"]}>
         <GridItem sm={1} md={1} lg={1}>
           <div
             style={{
             position: 'fixed',
             width: '8.4%'
           }}>
-            <Sidebar bgImage={programImage} currentPage="Program"/>
+            <Sidebar bgImage={programImage} currentPage="SCHEDULE"/>
           </div>
         </GridItem>
         <GridItem sm={1} md={1} lg={1}>
