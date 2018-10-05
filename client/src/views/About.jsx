@@ -25,7 +25,7 @@ export default class About extends Component {
   }
 
   render() {
-    let content = this.state.isOpen ? <Menu closed={this.closed}/> : (
+    let content = this.state.isOpen ? <MenuGrid closed={this.closed}/> : (
       <GridContainer justify="center" style={{backgroundColor:'#F4FCFF', position:'relative'}}>
 
         <GridItem xs={12} sm={10} md={10}>
