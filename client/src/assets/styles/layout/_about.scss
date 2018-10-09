@@ -5,8 +5,8 @@
 }
 
 body {
-	width: 100%;height: auto;
-	background-color: #F4FCFF;
+	max-width: 100%;height: auto;
+	font-family: 'Helvetica';
 }
 
 /* main shit and other import properties */ 
@@ -14,9 +14,8 @@ body {
 .main {
 	max-width: 80%;height: auto;
 	margin: 0 auto;
-	margin-bottom: 200px;
+	margin-bottom: 100px;
 	font-family: Helvetica;
-	background-color: #F4FCFF;
 }
 
 .centered {
@@ -30,17 +29,16 @@ body {
 /* Video section */
 
 .video {
-	width: 100%;
+	max-width: 100%;
 	height: 646.9px;
 	margin: 0 auto;
 	margin-top: 200px;
 }
 
-.down-arrow {
-  	width: 100px;
-  	height: 50px;
-  	margin-top: 80px;
-  	margin-bottom: 150px;
+.down-arrow-about {
+	height: 50px;
+    max-width: 100px;
+    margin: 50px 0 50px 0;
 }
 
 /* main texts properties */
@@ -54,6 +52,7 @@ body {
 	font-stretch: normal;
 	letter-spacing: normal;
 	color: #000000;
+	text-align: center;
 }
 
 .text {
@@ -71,13 +70,13 @@ body {
 	margin: 0 auto;
 	font-weight: 300;
 	margin-bottom: 50px;
-	width: 700px;
+	max-width: 700px;
 }
 
 /* pictures properties */
 
 .picture {
-	width: 700px;
+	max-width: 700px;
 	height: 600px;
 	margin: 0 auto;
 	background-color: black;
@@ -86,7 +85,7 @@ body {
 
 .double-pictures {
 	margin: 0 auto;
-	width: 700px;
+	max-width: 700px;
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 50px;
@@ -112,7 +111,7 @@ body {
 }
 
 .text-bold p {
-	width: 700px;
+	max-width: 700px;
 	display: block;
 	margin: 0 auto;
 	margin-bottom: 10px;
@@ -180,6 +179,7 @@ body {
 
 #button-highlights:hover {
 	transform: scale(0.97, 0.97);
+	background-color: rgba(255,255,255,0.8);
 }
 
 /* Last section about the founder*/
@@ -188,6 +188,7 @@ body {
 	margin: 0 auto;
 	width: 70%;height: auto;
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
 	align-items: center;
 }
@@ -197,45 +198,64 @@ body {
 	text-transform: capitalize;
 }
 
-.foundertext {
-	font-size: 20px;
+.message {
+	font-family: 'Helvetica';
+	margin: 0 auto;
+	text-align: justify;
+	font-size: 1em;
+	font-weight: 100;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.25;
+	letter-spacing: 1.2px;
+	color: #000000;
+	margin-bottom: 75px;
 }
 
-.Cerina-De-Rosen {
-  font-size: 30px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: 3px;
-  color: #000000;
+.container-cerina {
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
 }
 
-.FOUNDER-ARTISTIC-DIRECTOR-OF-ETFWB {
-  font-size: 20px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: 2px;
-  color: #5d1f18;
+.cerina {
+	width: 80%;height: 71%;
+}
+
+.cerina-text {
+	width: 600px;
 }
 
 /* ------------------------------------------ Media queries --------------------------------------------------- */
 
-/* Desktops and laptops ----------- */
+/* Desktops DONE */
 
-@media only screen  and (min-width : 1224px) {
+@media only screen  and (min-width: 1200px) and (max-width: 1800px) {
 	
-	.cerina {
-		width: 80%;height: 71%;
-	}
-
-	.cerina-text {
-		width: 600px;height: 400px;
+	// Video section 
+	
+	.video {
+		margin-top: 60px;
 	}
 
 }
 
-/* iPhone 4 ----------- */
+/* iPad Potrait and Landscape DONE */
+@media only screen and (min-width : 720px) and (max-width: 1024px) {
+
+	.main {
+		max-width: 80%;
+	}
+
+	// Video section 
+
+	.video {
+		margin-top: 132px;
+	}
+
+}
+
+/* Phone DONE*/
 
 @media only screen and (min-width : 320px) and (max-width : 600px) {
 	
@@ -249,11 +269,11 @@ body {
 		width: 100%;
 		height: 350px;
 		margin: 0 auto;
-		margin-top: 300px;
-		margin-bottom: 35px;
+		margin-top: 100px;
+		margin-bottom: 50px;
 	}
 
-	.down-arrow {
+	.down-arrow-about {
 	  	display: none;
 	}
 	
@@ -273,6 +293,7 @@ body {
 	.text p {
 		font-weight: 100;
 		width: 75%;
+		text-align: justify;
 	}
 
 	/* pictures properties */
@@ -330,11 +351,6 @@ body {
 		width: 100%;height: auto;
 	}
 
-	.container-cerina {
-		margin: 0 auto;
-		margin-top: 20px;
-	}
-
 	.cerina {
 		width: 225px;height: 300px;
 	}
@@ -369,441 +385,7 @@ body {
 		color: #000000;
 		margin-bottom: 30px;
 	}
-
-	.foundertext {
-		width: 75%;
-		margin: 0 auto;
-	}
-
-	.Cerina-De-Rosen {
-		display: none;
-	}
-
-	.FOUNDER-ARTISTIC-DIRECTOR-OF-ETFWB {
-		display: none;
-	}
 }
 
-/* Small Tablet (portrait and landscape) ----------- */
-@media only screen and (min-width : 601px) and (max-width : 767px) {
-	
-	.main {
-		max-width: 100%;
-	}
 
-	/* Video section */
 
-	.video {
-		width: 100%;
-		height: 350px;
-		margin: 0 auto;
-		margin-top: 300px;
-		margin-bottom: 35px;
-	}
-
-	.down-arrow {
-	  	display: none;
-	}
-	
-	/* Titles */
-
-	.about-titles {
-		margin-bottom: 30px;
-		font-size: 1.625em;
-	}
-	
-	/* Paragraphs text */ 
-
-	.text {
-		line-height: 1.25em;
-	}
-
-	.text p {
-		font-weight: 100;
-		width: 75%;
-	}
-
-	/* pictures properties */
-
-	.picture {
-		width: 100%;
-		height: 280px;
-	}
-
-	.double-pictures {
-		margin: 0 auto;
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 50px;
-	}
-
-	.double-pictures div {
-		width: 50%;
-		height: 400px;
-	}
-
-	/* Prizes text */	
-
-	.text-bold p {
-		width: 75%;
-	}
-
-	/* Button to Highlights*/ 
-
-	.call-to-action p {
-		text-align: center;
-		width: 90%;
-		font-weight: 900;
-		display: block;
-		margin: 0 auto;
-		margin-top: 50px;
-		margin-bottom: 10px;
-	}
-
-	.clickhere p {
-		font-size: 12px;
-		margin-bottom: 0;
-		text-align: center;
-	}
-
-	#button-highlights {
-		width: 250px;
-	}
-	
-	/* Last section about the founder*/
-
-	.thefounder {
-		margin: 0 auto;
-		width: 100%;height: auto;
-	}
-
-	.container-cerina {
-		margin: 0 auto;
-		margin-top: 20px;
-	}
-
-	.cerina {
-		width: 225px;height: 300px;
-	}
-
-	.cerina img {
-		width: 100%;height: 100%;
-	}
-
-	.cerina-text {
-		width: 100%;
-		margin: 0 auto;
-	}
-
-	.cerina-text h2 {
-		width: 75%;margin: 0 auto;
-		text-align: center;
-		font-size: 20px;
-		text-transform: uppercase;
-		margin-bottom: 30px;
-	}
-
-	.message {
-		margin: 0 auto;
-		width: 75%;
-		text-align: justify;
-		font-size: 1em;
-		font-weight: 100;
-		font-style: normal;
-		font-stretch: normal;
-		line-height: 1.25;
-		letter-spacing: 1.2px;
-		color: #000000;
-		margin-bottom: 30px;
-	}
-
-	.foundertext {
-		width: 75%;
-		margin: 0 auto;
-	}
-
-	.Cerina-De-Rosen {
-		display: none;
-	}
-
-	.FOUNDER-ARTISTIC-DIRECTOR-OF-ETFWB {
-		display: none;
-	}
-
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-width : 768px) and (max-width : 1024px) {
-
-	.main {
-		max-width: 80%;
-	}
-
-	/* Video section */
-
-	.video {
-		width: 100%;
-		height: 350px;
-		margin: 0 auto;
-		margin-top: 300px;
-		margin-bottom: 35px;
-	}
-
-	.down-arrow {
-	  	display: none;
-	}
-	
-	/* Titles */
-
-	.about-titles {
-		margin-bottom: 30px;
-		font-size: 1.625em;
-	}
-	
-	/* Paragraphs text */ 
-
-	.text {
-		line-height: 1.25em;
-	}
-
-	.text p {
-		font-weight: 100;
-		width: 75%;
-	}
-
-	/* pictures properties */
-
-	.picture {
-		width: 100%;
-		height: 280px;
-	}
-
-	.double-pictures {
-		margin: 0 auto;
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 50px;
-	}
-
-	.double-pictures div {
-		width: 50%;
-		height: 400px;
-	}
-
-	/* Prizes text */	
-
-	.text-bold p {
-		width: 75%;
-	}
-
-	/* Button to Highlights*/ 
-
-	.call-to-action p {
-		text-align: center;
-		width: 90%;
-		font-weight: 900;
-		display: block;
-		margin: 0 auto;
-		margin-top: 50px;
-		margin-bottom: 10px;
-	}
-
-	.clickhere p {
-		font-size: 12px;
-		margin-bottom: 0;
-		text-align: center;
-	}
-
-	#button-highlights {
-		width: 250px;
-	}
-	
-	/* Last section about the founder*/
-
-	.thefounder {
-		margin: 0 auto;
-		width: 100%;height: auto;
-	}
-
-	.container-cerina {
-		margin: 0 auto;
-		margin-top: 20px;
-	}
-
-	.cerina {
-		width: 225px;height: 300px;
-	}
-
-	.cerina img {
-		width: 100%;height: 100%;
-	}
-
-	.cerina-text {
-		width: 100%;
-		margin: 0 auto;
-	}
-
-	.cerina-text h2 {
-		width: 75%;margin: 0 auto;
-		text-align: center;
-		font-size: 20px;
-		text-transform: uppercase;
-		margin-bottom: 30px;
-	}
-
-	.message {
-		margin: 0 auto;
-		width: 75%;
-		text-align: justify;
-		font-size: 1em;
-		font-weight: 100;
-		font-style: normal;
-		font-stretch: normal;
-		line-height: 1.25;
-		letter-spacing: 1.2px;
-		color: #000000;
-		margin-bottom: 30px;
-	}
-
-	.foundertext {
-		width: 75%;
-		margin: 0 auto;
-	}
-
-	.Cerina-De-Rosen {
-		display: none;
-	}
-
-	.FOUNDER-ARTISTIC-DIRECTOR-OF-ETFWB {
-		display: none;
-	}
-
-}
-
-/* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1025px) {
-/* Last section about the founder*/
-
-	.thefounder {
-		margin: 0 auto;
-		width: 100%;height: auto;
-	}
-
-	.container-cerina {
-		margin: 0 auto;
-		margin-top: 20px;
-	}
-
-	.cerina {
-		width: 289px;height: 386px;
-	}
-
-	.cerina img {
-		width: 100%;height: 100%;
-	}
-
-	.cerina-text {
-		width: 100%;
-		margin: 0 auto;
-	}
-
-	.cerina-text h2 {
-		width: 75%;margin: 0 auto;
-		text-align: center;
-		font-size: 20px;
-		text-transform: uppercase;
-		margin-bottom: 30px;
-	}
-
-	.message {
-		margin: 0 auto;
-		width: 75%;
-		text-align: justify;
-		font-size: 1em;
-		font-weight: 100;
-		font-style: normal;
-		font-stretch: normal;
-		line-height: 1.25;
-		letter-spacing: 1.2px;
-		color: #000000;
-		margin-bottom: 30px;
-	}
-
-	.foundertext {
-		width: 75%;
-		margin: 0 auto;
-	}
-
-	.Cerina-De-Rosen {
-		display: none;
-	}
-
-	.FOUNDER-ARTISTIC-DIRECTOR-OF-ETFWB {
-		display: none;
-	}
-}
-
-/* Bigger Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
-/* Last section about the founder*/
-
-	.thefounder {
-		margin: 0 auto;
-		width: 100%;height: auto;
-	}
-
-	.container-cerina {
-		margin: 0 auto;
-		margin-top: 20px;
-	}
-
-	.cerina {
-		width: 401px;height: 535px;
-	}
-
-	.cerina img {
-		width: 100%;height: 100%;
-	}
-
-	.cerina-text {
-		width: 75%;height: auto;
-		margin: 0 auto;
-		margin-bottom: 50px;
-	}
-
-	.cerina-text h2 {
-		width: 75%;margin: 0 auto;
-		text-align: center;
-		font-size: 20px;
-		text-transform: uppercase;
-		margin-bottom: 30px;
-	}
-
-	.message {
-		margin: 0 auto;
-		width: 700px;
-		text-align: justify;
-		font-size: 1em;
-		font-weight: 100;
-		font-style: normal;
-		font-stretch: normal;
-		line-height: 1.25;
-		letter-spacing: 1.2px;
-		color: #000000;
-	}
-
-	.foundertext {
-		width: 75%;
-		margin: 0 auto;
-	}
-
-	.Cerina-De-Rosen {
-		display: none;
-	}
-
-	.FOUNDER-ARTISTIC-DIRECTOR-OF-ETFWB {
-		display: none;
-	}
-}

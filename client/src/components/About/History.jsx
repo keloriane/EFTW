@@ -1,23 +1,29 @@
 import React, {Component} from 'react'
 import downArrow from '../../assets/svg/down-arrow.svg';
 import cerina from '../../assets/img/mobile-cerina.jpg';
-import poster from '../../assets/img/video_thumbnail@2x.png'
+import {Link} from 'react-router-dom';
 
 export default class History extends Component {
   render() {
-    // const video = 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4'
     return (
       <div className="main">
 
-        <div className="video">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/I1rR_p2EzyY?rel=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+        <div className="video fadeInFast">
+          <iframe
+            title="ETHNO TENDANCE FASHION WEEK Brussels 2017"
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/I1rR_p2EzyY?rel=0"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen></iframe>
         </div>
 
-        <div className="full-width centered">
-          <img className="down-arrow" src={downArrow} alt="down arrow"/>
+        <div className="full-width centered fadeInSlow">
+          <img className="down-arrow-about" src={downArrow} alt="down arrow"/>
         </div>
 
-        <h2 className="about-titles full-width centered">about etfwb</h2>
+        <h2 className="about-titles full-width centered fadeIn">about etfwb</h2>
 
         <div className="text full-width centered">
           <p>Since seven years, the Ethno Tendance Fashion Week Brussels (ETFWB) is the
@@ -84,25 +90,26 @@ export default class History extends Component {
           <p>Click on the link below:</p>
         </div>
 
-        <div className="full-width">
-          <button id="button-highlights" type="button">highlights</button>
-        </div>
+        <Link style={{
+          textDecoration: 'none'
+        }} to='/Highlights'>
+          <div className="full-width pulse">
+            <button id="button-highlights" type="button">highlights</button>
+          </div>
+        </Link>
 
         <div className="thefounder">
 
           <div className="cerina-text">
-            <h2 className="about-titles full-width left">Kind words from our founder</h2>
+            <h2 className="about-titles full-width">Kind words from our founder</h2>
 
             <p className="message">"Brussels, orphan of a Fashion Week, like other major
               capitals of the world, had to have its event dedicated to international fashion.
               <br/>
               <br/>
               In 2012, we launched this unique and innovative project, we took up the
-              challenge!"</p>
-            <div>
-              <h3 className="Cerina-De-Rosen full-width left">Cerina De Rosen</h3>
-              <p className="FOUNDER-ARTISTIC-DIRECTOR-OF-ETFWB full-width">FOUNDER & ARTISTIC DIRECTOR OF ETFWB</p>
-            </div>
+              challenge!"
+            </p>
           </div>
 
           <div className="container-cerina">

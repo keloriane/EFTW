@@ -3,12 +3,12 @@ import Grid from '@material-ui/core/Grid';
 
 import {NavLink} from 'react-router-dom';
 
-import bg2017 from '../../../assets/img/2017@2x.png';
-import bg2016 from '../../../assets/img/2016@2x.png';
-import bg2015 from '../../../assets/img/2015@2x.png';
-import bg2014 from '../../../assets/img/2014@2x.png';
-import bg2013 from '../../../assets/img/2013@2x.png';
-import bg2012 from '../../../assets/img/2012@2x.png';
+import bg2017 from '../../../assets/img/2017.png';
+import bg2016 from '../../../assets/img/2016.png';
+import bg2015 from '../../../assets/img/2015.png';
+import bg2014 from '../../../assets/img/2014.png';
+import bg2013 from '../../../assets/img/2013.png';
+import bg2012 from '../../../assets/img/2012.png';
 
 import {images2017} from '../../../assets/mocks/images.js';
 import {images2016} from '../../../assets/mocks/images.js';
@@ -19,16 +19,17 @@ import {images2012} from '../../../assets/mocks/images.js';
 
 function FirstRow(props) {
   const yearText = {
+    fontFamily:'helvetica',
     color: 'white',
-    fontSize: '40px',
-    fontWeight: '85',
+    fontSize: '30px',
+    fontWeight: '600',
     textDecoration: 'none'
   }
   return (
     <React.Fragment>
       <Grid item xs={12} sm={4} md={4}>
 
-        <div className="container slideInRightFast">
+        <div className="container fadeInSlow">
           <NavLink
             style={yearText}
             to={{
@@ -45,7 +46,7 @@ function FirstRow(props) {
       </Grid>
       <Grid item xs={12} sm={4} md={4}>
 
-      <div className="container slideInRightMedium">
+      <div className="container fadeInSlow">
           <NavLink
             style={yearText}
             to={{
@@ -61,7 +62,7 @@ function FirstRow(props) {
       </Grid>
       <Grid item xs={12} sm={4} md={4}>
 
-        <div className="container slideInRightSlow">
+        <div className="container fadeInSlow">
           <NavLink
             style={yearText}
             to={{
@@ -76,7 +77,7 @@ function FirstRow(props) {
         </div>
       </Grid>
       <Grid item xs={12} sm={4} md={4}>
-        <div className="container slideInRightFast">
+        <div className="container fadeInSlow">
           <NavLink
             style={yearText}
             to={{
@@ -91,7 +92,7 @@ function FirstRow(props) {
         </div>
       </Grid>
       <Grid item xs={12} sm={4} md={4}>
-        <div className="container slideInRightMedium">
+        <div className="container fadeInSlow">
           <NavLink
             style={yearText}
             to={{
@@ -107,7 +108,7 @@ function FirstRow(props) {
       </Grid>
       <Grid item xs={12} sm={4} md={4}>
 
-        <div className="container slideInRightSlow">
+        <div className="container fadeInSlow">
           <NavLink
             style={yearText}
             to={{
@@ -129,16 +130,12 @@ function NavGallery(props) {
 
   return (
     <div>
-      <Grid
-        container
-        justify="center"
-        alignItems="center"
-        style={{
-        marginTop: '10px'
-      }}>
+      <Grid container justify="center" alignItems="center">
+        
         <Grid item xs={12} sm={10} md={10} container>
           <FirstRow/>
         </Grid>
+      
       </Grid>
     </div>
   );

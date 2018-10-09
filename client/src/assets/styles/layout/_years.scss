@@ -12,16 +12,28 @@ body {
   position: relative;
 }
 
-.gallery-container {
-  padding-top: .9375rem;
+.gallery_paper_container {
+
+}
+
+.back_arrow {
+  width: 50px;height: 50px;
+  position: absolute;
+  left: 100px;top: 80px;
+}
+
+.gallery_paper_content {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
 }
 
 .gallery-card {
+  margin: 10px;
   position: relative;
   overflow: hidden;
-  padding: 10px;
-  width: 200px;
-  height: 200px;
+  max-width: 250px;
+  max-height: 250px;
 }
 
 .gallery-thumbnail {
@@ -39,6 +51,10 @@ body {
   display: flex;
   justify-content: center;
   align-items:center;
+}
+
+.arrowWrapper:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width:360px){
@@ -105,5 +121,11 @@ body {
   &:focus,
   &:hover {
     color: #fff;
+  }
+}
+
+@media screen and (max-width:719px) {
+  .back_arrow {
+    display: none;
   }
 }

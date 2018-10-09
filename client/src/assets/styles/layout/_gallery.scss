@@ -1,4 +1,5 @@
 .gallery_container{
+  position: relative;
   background-color: #FFF4F7;
   width: 100%;
   // height: 100vh;
@@ -7,22 +8,29 @@
   align-items: center;
 
   .nav_gallery_paper{
+    width: 100%;height: 100%;
     align-items: center;
-    }
-  .gallery_paper {
-    width: 1223px;
+  }
+
+  .gallery_paper_image {
+    width: 1200px;
     height: 100%;
     display: flex;
     justify-content: center;
-    .gallery_paper_content{
-      background: #FFF4F7 !important;
-    }
+
     // ANIMATION GALLERIE
+
     .container {
       position: relative;
       text-align: center;
       margin: 8px 10px;
+      transition: 0.2s ease-in-out;
     }
+
+    .container:hover {
+      transform: scale(1.01);
+    }
+
     .centered {
       position: absolute;
       top: 50%;
@@ -30,33 +38,65 @@
       transform: translate(-50%, -50%);
       
     }
-    .opacity {
-      position:absolute;
-      background: rgba(black, 0.5);
-      width: 100%;
-      height: 100%;
-      // z-index: 999;
-    }
+
     .bgImage {
       max-height:100%;
       max-width: 100%;
-      // border: solid 2px black;
+    }
+  }
+
+  .gallery_paper {
+    width: 50%;;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+    .gallery_paper_content{
+      background: #FFF4F7 !important;
+    }
+
+    // ANIMATION GALLERIE
+
+    .container {
+      position: relative;
+      text-align: center;
+      margin: 8px 10px;
+      transition: 0.2s ease-in-out;
+    }
+
+    .container:hover {
+      transform: scale(1.01);
+    }
+
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+    }
+
+    .bgImage {
+      max-height:100%;
+      max-width: 100%;
     }
   }
 }
 
-/* @media screen and (min-width:590px){
+@media screen and (max-width:590px){
   .gallery_paper_container{
-    background: red;
-    height: 100vh;
+    height: auto;
   }
-} */
-@media screen and (min-width:600px){
+  .gallery_paper_image{
+    margin-top: 70px;
+  }
+} 
+@media screen and (min-width:590px){
   .gallery_container{
     height: 100vh;
   }
 }
-@media screen and (max-width:600px){
+@media screen and (max-width:768px){
   .bgImage {
     height:250px;
     width: 250px;

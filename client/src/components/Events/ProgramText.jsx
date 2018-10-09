@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 export const ProgramText = () => {
   return (
@@ -6,8 +7,8 @@ export const ProgramText = () => {
       <div className="program-content">
         <h4 className="program-subheaders">Press Accreditation Form</h4>
         <p className="program-subcontent">The Press Accreditation application for ETFWB2018 is
-        now available. Only Press who apply online will be accredited. For enquiries,
-        contact us.</p>
+        now available. Only Press who apply online will be accredited. <br/><br/>For enquiries,
+        <Link to='/Contact'> contact us.</Link></p>
         <h4 className="program-subheaders">Application closes 20th of October, 2018.</h4>
         <h4 className="program-subheaders">Who qualifies for a press badge at ETFWB? </h4>
         <p className="program-subcontent">Editors, reporters, writers, television and radio producers, and

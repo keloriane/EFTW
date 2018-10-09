@@ -9,9 +9,57 @@
   }
 }
 
-.slideInUp {
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  transition: 1s ease-in-out;
+}
+
+.fadeInFast {
+  animation-name: fadeIn;
+  animation-duration: 0.25s;
+  transition: ease-out;
+}
+
+// Home Page List
+
+.fadeInMedium {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  transition: ease-out;
+}
+
+.fadeInSlow {
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  transition: ease-out;
+}
+
+
+
+.slideInUpFast {
   animation-name: slideInUp;
-  animation-duration:0.5s;
+  animation-duration:0.25s;
+}
+
+.slideInUpMedium {
+  animation-name: slideInUp;
+  animation-duration:0.50s;
+}
+
+.slideInUpSlow {
+  animation-name: slideInUp;
+  animation-duration:0.75s;
 }
 
 
@@ -28,21 +76,21 @@
 
 .slideInLeftFast {
   animation-name: slideInLeft;
-  animation-duration:0.2s;
-  transition: 1s ease-in;
+  animation-duration:0.75s;
+  transition: 1s ease-out;
 }
 
 .slideInLeftMedium {
   animation-name: slideInLeft;
-  animation-duration:0.5s;
-  transition: 1s ease-in-out;
+  animation-duration:1.5s;
+  transition: 1s ease-out;
 
 }
 
 .slideInLeftSlow {
   animation-name: slideInLeft;
-  animation-duration:0.7s;
-  transition: 1s ease-in-out;
+  animation-duration:2.25s;
+  transition: 1s ease-out;
 
 }
 
@@ -59,20 +107,20 @@
 
 .slideInRightFast {
   animation-name: slideInRight;
-  animation-duration:0.2s;
-  transition: 1s ease-in;
+  animation-duration:1s;
+  transition: 1s ease-out;
 }
 
 .slideInRightMedium {
   animation-name: slideInRight;
-  animation-duration:0.5s;
+  animation-duration:1.5s;
   transition: 1s ease-in-out;
 
 }
 
 .slideInRightSlow {
   animation-name: slideInRight;
-  animation-duration:0.7s;
+  animation-duration:2s;
   transition: 1s ease-in-out;
 
 }
@@ -90,4 +138,42 @@
 .slideInDown {
   animation-name: slideInDown;
   animation-duration:0.5s;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  animation-name: pulse;
+}
+
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+  animation-duration: 0.65s;
 }

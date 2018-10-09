@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469 161.215">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 50px;
+      }
+
+      .cls-1, .cls-3 {
+        font-family: Lato-Light, Lato;
+        font-weight: 300;
+      }
+
+      .cls-2 {
+        font-size: 63px;
+        font-family: Lato-Regular, Lato;
+      }
+
+      .cls-3 {
+        font-size: 33px;
+        letter-spacing: 1em;
+      }
+    </style>
+  </defs>
+  <g id="etfw-logo" transform="translate(-69.248 -378.714)">
+    <text id="ETHNO_TENDANCE" data-name="ETHNO TENDANCE" class="cls-1" transform="matrix(1, -0.003, 0.003, 1, 70.101, 428.876)"><tspan x="0" y="0">ETHNO TENDANCE</tspan></text>
+    <text id="FASHION_WEEK" data-name="FASHION WEEK" class="cls-2" transform="translate(69.248 489.416)"><tspan x="0" y="0">FASHION WEEK</tspan></text>
+    <text id="BRUSSELS" class="cls-3" transform="translate(114.697 532.93)"><tspan x="0" y="0">BRUSSELS</tspan></text>
+  </g>
+</svg>

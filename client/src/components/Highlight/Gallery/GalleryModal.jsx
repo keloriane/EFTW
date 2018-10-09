@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import GridContainer from '../../../common/grid/GridContainer';
 import GridItem from '../../../common/grid/GridItem';
 import { Hidden } from '@material-ui/core';
-import RightArrow from '../../../assets/img/next@2x.png'
-import LeftArrow from '../../../assets/img/previous@2x.png'
+import RightArrow from '../../../assets/svg/next.svg';
+import LeftArrow from '../../../assets/svg/previous.svg';
+
 // Component for gallery modal
 import Swipeable from 'react-swipeable';
 class GalleryModal extends Component {
@@ -92,7 +93,7 @@ class GalleryModal extends Component {
           <Hidden only="xs">
             <GridItem sm={3} md={3}>
             <div className="arrowWrapper" onClick={this.prevImg}>
-              <img style={{width:'34.07px', height:'64.51', float:'left'}} src={LeftArrow} alt="left"></img>
+              <img style={{width:'34.07px', height:'64.51px', float:'left'}} src={LeftArrow} alt="left"></img>
             </div>
 
             </GridItem>
@@ -118,7 +119,7 @@ class GalleryModal extends Component {
             <Hidden only="xs">
             <GridItem sm={3} md={3}>
               <div className="arrowWrapper" onClick={this.nextImg}>
-                <img style={{width:'34.07px', height:'64.51', float:'right'}} src={RightArrow} alt="next"></img>
+                <img style={{width:'34.07px', height:'64.51px', float:'right'}} src={RightArrow} alt="next"></img>
               </div>
             </GridItem>
             </Hidden>

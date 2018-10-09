@@ -2,7 +2,7 @@ import React from 'react'
 import poster from './../../assets/img/video_thumbnail@2x.png'
 import GridContainer from '../../common/grid/GridContainer';
 import GridItem from '../../common/grid/GridItem';
-import downArrow from '../../assets/img/down-arrow@2x.png';
+import downArrow from '../../assets/svg/down-arrow.svg';
 export default () => {
   const video = 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4'
   return (
