@@ -1,268 +1,61 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import GridContainer from '../../common/grid/GridContainer';
 import GridItem from '../../common/grid/GridItem';
+import closeButton from './../../assets/svg/Close.svg'
+import {TimelineMax, Expo} from 'gsap'
+import logo from './../../assets/svg/etfw-logo.svg'
+import rightImage from './../../assets/menu/img/right-picture.png'
+import leftImage from './../../assets/menu/img/left-picture.png'
 import {NavLink} from 'react-router-dom';
 
-import mainImg from '../../assets/home/home.png';
-import aboutImg from '../../assets/home/about.jpg';
-import contactImg from '../../assets/home/contact.jpg';
-import highlightsImg from '../../assets/home/highlights.jpg';
-import programImg from '../../assets/home/program.jpg';
-import ticketsImg from '../../assets/home/tickets.jpg';
-import HomeButton from '../../common/customButtons/HomeButton';
+import HomeButton from './../../common/customButtons/HomeButton';
 import {Hidden} from '@material-ui/core'
 
-import address from '../../assets/img/address@2x.png';
-import whiteLogo from '../../assets/img/etfw-logo@2x.png';
+import address from './../../assets/img/address@2x.png';
+import whiteLogo from './../../assets/img/etfw-logo@2x.png';
+import imageSource from './../../assets/home/home.png';
 
-import logo from '../../assets/svg/etfw-logo.svg';
+// I need to create a Menu component that will render either MenuMobile or MenuGrid
+export default class MenuMobile extends Component {
 
-export default class NavHome extends Component {
-  state = {
-    activeLink: ''
+  handleReverse =()=>{
+
+    const menuContainer = document.getElementsByClassName('menu-grid-container')
+    const menuItem = document.getElementsByClassName('nav__menu__items')
+    const leftContainer = document.getElementsByClassName('left_container')
+    const rightContainer = document.getElementsByClassName('right_container')
+    const menuAnimationReverse = new TimelineMax()
+     
+    menuAnimationReverse  
+      .to(menuContainer, 1,{width:0, height:0, ease:Expo.easeInOut})
+      .staggerTo(menuItem, 0.5,{y:200, yoyo:true, opacity:0,ease:Expo.easeInOut},0.1)
+      .to([rightContainer, leftContainer],0.5,{opacity:0,ease:Expo.easeInOut},'-=0.1')
+
+      setTimeout(() => { 
+        this.props.closed();
+      }, 2500);
+
   }
 
-  handleChange = (e) => {
-    e.preventDefault();
-    this.setState({activeLink: e.target.style.page})
+  componentDidMount(){
+    
+    const menuContainer = document.getElementsByClassName('menu-grid-container')
+    const menuItem = document.getElementsByClassName('nav__menu__items')
+    const leftContainer = document.getElementsByClassName('left_container')
+    const rightContainer = document.getElementsByClassName('right_container')
+    const menuAnimation = new TimelineMax()
+    
+    menuAnimation
+      .from(menuContainer, 1,{width:0, height:0, ease:Expo.easeInOut,transformOrigin:"top right"})
+      .staggerFrom(menuItem, 0.5,{y:200, yoyo:true, opacity:0,ease:Expo.easeInOut},0.1)
+      .from([rightContainer, leftContainer],0.5,{opacity:0,ease:Expo.easeInOut},'-=0.1')
+
   }
 
-  handleLeave = (e) => {
-    e.preventDefault();
-    this.setState({activeLink: ''})
-  }
-
-  componentDidUpdate() {
-    console.log(this.state)
-  }
   render() {
-    let imageSource = '';
-    if (this.state.activeLink === '') {
-      imageSource = mainImg;
-    } else if (this.state.activeLink === 'about') {
-      imageSource = aboutImg;
-    } else if (this.state.activeLink === 'highlights') {
-      imageSource = highlightsImg
-    } else if (this.state.activeLink === 'program') {
-      imageSource = programImg
-    } else if (this.state.activeLink === 'contact') {
-      imageSource = contactImg
-    } else if (this.state.activeLink === 'tickets') {
-      imageSource = ticketsImg
-    }
 
     return (
-      <div style={{
-        overflow: 'hidden'
-      }}>
-        <Hidden only={["xs", "sm"]}>
-          <GridContainer className="home_wrapper">
 
-            <GridItem
-              xs={12}
-              sm={6}
-              md={6}
-              style={{
-              textAlign: 'center'
-            }}>
-
-              <GridContainer className="content_container">
-
-                <GridItem xs={12} sm={12} md={12}>
-                  <img className="logo_container fadeInFast" src={logo} alt="logo"></img>
-                </GridItem>
-
-                <GridItem
-                  style={{
-                  page: 'about'
-                }}
-                  xs={12}
-                  sm={12}
-                  md={12}
-                  onMouseEnter={this.handleChange}
-                  onMouseLeave={this.handleLeave}>
-
-                  <NavLink className="home_boutons fadeInMedium" to='/about'>
-
-                    <HomeButton
-                      style={{
-                      page: 'about',
-                      width: '100%'
-                    }}
-                      onMouseEnter={this.handleChange}
-                      onMouseLeave={this.handleLeave}>
-                      <h2 className="home_boutons">about</h2>
-                    </HomeButton>
-
-                  </NavLink>
-
-                </GridItem>
-
-                <GridItem
-                  style={{
-                  page: 'program'
-                }}
-                  xs={12}
-                  sm={12}
-                  md={12}
-                  onMouseEnter={this.handleChange}
-                  onMouseLeave={this.handleLeave}>
-
-                  <NavLink className="home_boutons" to='/program'>
-
-                    <HomeButton
-                      style={{
-                      page: 'program',
-                      width: '100%'
-                    }}
-                      onMouseEnter={this.handleChange}
-                      onMouseLeave={this.handleLeave}>
-                      <h2 className="home_boutons fadeInMedium">2018 schedule</h2>
-                    </HomeButton>
-
-                  </NavLink>
-
-                </GridItem>
-
-                <GridItem
-                  style={{
-                  page: 'highlights'
-                }}
-                  xs={12}
-                  sm={12}
-                  md={12}
-                  onMouseEnter={this.handleChange}
-                  onMouseLeave={this.handleLeave}>
-
-                  <NavLink className="home_boutons" to='/highlights'>
-
-                    <HomeButton
-                      style={{
-                      page: 'highlights',
-                      width: '100%'
-                    }}
-                      onMouseEnter={this.handleChange}
-                      onMouseLeave={this.handleLeave}>
-                      <h2 className="home_boutons fadeInMedium">highlights</h2>
-                    </HomeButton>
-
-                  </NavLink>
-
-                </GridItem>
-
-                <GridItem
-                  style={{
-                  page: 'contact'
-                }}
-                  xs={12}
-                  sm={12}
-                  md={12}
-                  onMouseEnter={this.handleChange}
-                  onMouseLeave={this.handleLeave}>
-
-                  <NavLink className="home_boutons" to='/contact'>
-
-                    <HomeButton
-                      style={{
-                      page: 'contact',
-                      width: '100%'
-                    }}
-                      onMouseEnter={this.handleChange}
-                      onMouseLeave={this.handleLeave}>
-                      <h2 className="home_boutons fadeInMedium">CONTACT</h2>
-                    </HomeButton>
-
-                  </NavLink>
-
-                </GridItem>
-
-                <GridItem
-                  style={{
-                  page: 'tickets'
-                }}
-                  xs={12}
-                  sm={12}
-                  md={12}
-                  onMouseEnter={this.handleChange}
-                  onMouseLeave={this.handleLeave}>
-
-                  <a
-                    href="https://www.weezevent.com/widget_billeterie.php?id_evenement=376927&lg_billetterie=1&code=27912&resize=1&width_auto=1&color_primary=00AEEF%22"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="home_boutons"
-                    to='/'>
-
-                    <HomeButton
-                      style={{
-                      page: 'tickets',
-                      width: '100%'
-                    }}
-                      onMouseEnter={this.handleChange}
-                      onMouseLeave={this.handleLeave}>
-                      <h2 className="tickets_boutons fadeInMedium">buy tickets</h2>
-                    </HomeButton>
-
-                  </a>
-
-                </GridItem>
-
-                <GridItem xs={12} sm={12} md={12}>
-
-                  <GridContainer justify='center'>
-
-                    <GridItem xs={4} sm={4}>
-
-                      <GridContainer className='home_social_bar fadeInSlow' justify='space-between'>
-
-                        <GridItem xs={4} sm={4}>
-                          <i className="fab fa-facebook fa-2x"></i>
-                        </GridItem>
-
-                        <GridItem xs={4} sm={4}>
-                          <i className="fab fa-instagram fa-2x"></i>
-                        </GridItem>
-
-                        <GridItem xs={4} sm={4}>
-                          <i className="fab fa-youtube fa-2x"></i>
-                        </GridItem>
-
-                      </GridContainer>
-
-                    </GridItem>
-
-                  </GridContainer>
-
-                </GridItem>
-
-              </GridContainer>
-
-            </GridItem>
-
-            <GridItem
-              xs={12}
-              sm={6}
-              md={6}
-              style={{
-              textAlign: 'center',
-              height: '100vh'
-            }}>
-
-              <img
-                className="slideInRightFast"
-                src={imageSource}
-                style={{
-                width: '100%',
-                maxHeight: '100%'
-              }}
-                alt={this.state.activeLink}></img>
-
-            </GridItem>
-
-          </GridContainer>
-        </Hidden>
-
-        <Hidden only={["md", "lg", "xl"]}>
           <GridContainer
             justify="center"
             alignItems="center"
@@ -270,12 +63,15 @@ export default class NavHome extends Component {
             backgroundImage: `linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(${imageSource})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            height: '100vh'
+            height: '100vh',
+            overflow:'hidden'
           }}>
             <GridItem xs={12} sm={12}>
+            <button onClick={this.handleReverse} className="close_button nav__menu__items"><img src={closeButton} alt="close"/></button>
+
               <GridContainer justify="center">
                 <GridItem xs={10} sm={10} md={6}>
-                  <GridContainer className="wrapperSmall">
+                  <GridContainer className="wrapperSmall fadeInMedium">
                     <GridItem
                       xs={12}
                       sm={12}
@@ -295,7 +91,10 @@ export default class NavHome extends Component {
                       onMouseEnter={this.handleChange}
                       onMouseLeave={this.handleLeave}>
                       <NavLink
+                        className="nav__menu__items"
                         to='/about'
+                        activeStyle={{ color: '#FFB437' }}
+                        onClick={this.props.closed}
                         style={{
                         textDecoration: 'none'
                       }}>
@@ -320,7 +119,10 @@ export default class NavHome extends Component {
                       onMouseEnter={this.handleChange}
                       onMouseLeave={this.handleLeave}>
                       <NavLink
+                        className="nav__menu__items"
                         to='/highlights'
+                        activeStyle={{ color: '#FFB437' }}
+                        onClick={this.props.closed}
                         style={{
                         textDecoration: 'none'
                       }}>
@@ -345,7 +147,10 @@ export default class NavHome extends Component {
                       onMouseEnter={this.handleChange}
                       onMouseLeave={this.handleLeave}>
                       <NavLink
+                        className="nav__menu__items"
                         to='/program'
+                        onClick={this.props.closed}
+                        activeStyle={{ color: '#FFB437' }}
                         style={{
                         textDecoration: 'none'
                       }}>
@@ -371,7 +176,10 @@ export default class NavHome extends Component {
                       onMouseEnter={this.handleChange}
                       onMouseLeave={this.handleLeave}>
                       <NavLink
+                        className="nav__menu__items"
                         to='/contact'
+                        activeStyle={{ color: '#FFB437' }}
+                        onClick={this.props.closed}
                         style={{
                         textDecoration: 'none'
                       }}>
@@ -397,6 +205,7 @@ export default class NavHome extends Component {
                       onMouseEnter={this.handleChange}
                       onMouseLeave={this.handleLeave}>
                       <a
+                        className="nav__menu__items"
                         href='https://www.weezevent.com/widget_billeterie.php?id_evenement=376927&lg_billetterie=1&code=27912&resize=1&width_auto=1&color_primary=00AEEF%22'
                         style={{
                         textDecoration: 'none'
@@ -420,7 +229,7 @@ export default class NavHome extends Component {
                       page: 'address',
                       marginBottom: '20px'
                     }}>
-                      <img src={address} className="address" alt="address"></img>
+                      <img src={address} className="address nav__menu__items" alt="address"></img>
                     </GridItem>
                     <GridItem xs={12} sm={12} md={12}>
 
@@ -428,12 +237,7 @@ export default class NavHome extends Component {
 
                         <GridItem xs={6} sm={6}>
 
-                          <GridContainer
-                            className='fadeInSlow'
-                            justify='space-between'
-                            style={{
-                            textAlign: 'center'
-                          }}>
+                          <GridContainer className='fadeInSlow' justify='space-between' style={{textAlign:'center'}}>
 
                             <GridItem xs={4} sm={4}>
                               <a
@@ -441,7 +245,7 @@ export default class NavHome extends Component {
                                 target="_blank"
                                 rel="noopener noreferrer">
                                 <i
-                                  className="fab fa-facebook fa-2x"
+                                  className="fab fa-facebook fa-2x nav__menu__items"
                                   style={{
                                   color: 'white'
                                 }}></i>
@@ -454,7 +258,7 @@ export default class NavHome extends Component {
                                 target="_blank"
                                 rel="noopener noreferrer">
                                 <i
-                                  className="fab fa-instagram fa-2x"
+                                  className="fab fa-instagram fa-2x nav__menu__items"
                                   style={{
                                   color: 'white'
                                 }}></i>
@@ -467,7 +271,7 @@ export default class NavHome extends Component {
                                 target="_blank"
                                 rel="noopener noreferrer">
                                 <i
-                                  className="fab fa-youtube fa-2x"
+                                  className="fab fa-youtube fa-2x nav__menu__items"
                                   style={{
                                   color: 'white'
                                 }}></i>
@@ -487,9 +291,6 @@ export default class NavHome extends Component {
               </GridContainer>
             </GridItem>
           </GridContainer>
-        </Hidden>
-
-      </div>
     )
   }
 }

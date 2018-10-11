@@ -6,7 +6,7 @@ import GridItem from '../common/grid/GridItem';
 
 import Socialbar from '../common/socialbar/Socialbar';
 import {Hidden} from '@material-ui/core';
-import Menu from '../components/Menu/MenuGrid';
+import {Menu} from '../components/Menu/Menu';
 import Footer from '../common/footer/Footer';
 
 import logo from '../assets/svg/etfw-logo.svg';
@@ -30,14 +30,54 @@ export default class Contact extends Component {
     let content = this.state.isOpen
       ? <Menu closed={this.closed}/>
       : (
-        <GridContainer style={{height:'100vh', overflow:'hidden'}}>
+        <GridContainer
+          style={{
+          height: '100vh',
+          overflow: 'hidden'
+        }}>
 
-         <Hidden only={['md', 'lg', 'xl']}>
+          <Hidden only={['md', 'lg', 'xl']}>
             <GridItem xs={12} sm={12}>
-              <GridContainer justify="space-between" alignItems="center" style={{backgroundColor:'white', height:'70px', textAlign:'center'}}>
-              <GridItem xs={3} sm={3}><img src={ticket} style={{height:'50px', width:'50px'}} alt="buy tickets"></img></GridItem>
-              <GridItem xs={4} sm={4}><img src={logo} style={{height:'50px', width:'100px'}} alt="ETFWB"></img></GridItem>
-              <GridItem onClick={this.opened} xs={3} sm={3}><img src={menu} style={{height:'50px', width:'50px'}} alt="menu"></img></GridItem>
+              <GridContainer
+                justify="space-between"
+                alignItems="center"
+                style={{
+                backgroundColor: 'white',
+                height: '70px',
+                textAlign: 'center'
+              }}>
+                <GridItem xs={3} sm={3}>
+                  <a
+                    href="https://www.weezevent.com/widget_billeterie.php?id_evenement=376927&lg_billetterie=1&code=27912&resize=1&width_auto=1&color_primary=00AEEF"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <img
+                      src={ticket}
+                      style={{
+                      height: '50px',
+                      width: '50px'
+                    }}
+                      alt="buy tickets"></img>
+                  </a>
+                </GridItem>
+                <GridItem xs={4} sm={4}>
+                  <img
+                    src={logo}
+                    style={{
+                    height: '50px',
+                    width: '100px'
+                  }}
+                    alt="ETFWB"></img>
+                </GridItem>
+                <GridItem onClick={this.opened} xs={3} sm={3}>
+                  <img
+                    src={menu}
+                    style={{
+                    height: '50px',
+                    width: '50px'
+                  }}
+                    alt="menu"></img>
+                </GridItem>
                 <GridItem xs={12} sm={12}><Divider/></GridItem>
               </GridContainer>
             </GridItem>
@@ -46,38 +86,38 @@ export default class Contact extends Component {
           <GridItem xs={12} sm={12} md={10} lg={10}>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={12} lg={12}>
-              <div className="fadeInLeft fadeInSlow">
-                <div className="contact_container">
+                <div className="fadeInLeft fadeInSlow">
+                  <div className="contact_container">
 
-                  <div className="contact_paper">
-                    <div className="contact_paper_content">
-                      <div className="contact_title_infos">
-                        BRAND PARTNERSHIPS
-                      </div>
-                      <div className="contact_text_infos">
-                        <p>Name, Position</p>
-                        <p>Tel: +32 (0) 499 999 999</p>
-                        <p>name.forname@ethnotendance.com</p>
-                      </div>
-                      <div className="contact_title_infos">
-                        PRESS ACCREDITATION
-                      </div>
-                      <div className="contact_text_infos">
-                        <p>Name, Position</p>
-                        <p>Tel: +32 (0) 499 999 999</p>
-                        <p>name.forname@ethnotendance.com</p>
-                      </div>
-                      <div className="contact_title_infos">
-                        DESIGNERS (APPLICATIONS & SCHEDULE)
-                      </div>
-                      <div className="contact_text_infos_last">
-                        <p>Name, Position</p>
-                        <p>Tel: +32 (0) 499 999 999</p>
-                        <p>name.forname@ethnotendance.com</p>
+                    <div className="contact_paper">
+                      <div className="contact_paper_content">
+                        <div className="contact_title_infos">
+                          BRAND PARTNERSHIPS
+                        </div>
+                        <div className="contact_text_infos">
+                          <p>Name, Position</p>
+                          <p>Tel: +32 (0) 499 999 999</p>
+                          <p>name.forname@ethnotendance.com</p>
+                        </div>
+                        <div className="contact_title_infos">
+                          PRESS ACCREDITATION
+                        </div>
+                        <div className="contact_text_infos">
+                          <p>Name, Position</p>
+                          <p>Tel: +32 (0) 499 999 999</p>
+                          <p>name.forname@ethnotendance.com</p>
+                        </div>
+                        <div className="contact_title_infos">
+                          DESIGNERS (APPLICATIONS & SCHEDULE)
+                        </div>
+                        <div className="contact_text_infos_last">
+                          <p>Name, Position</p>
+                          <p>Tel: +32 (0) 499 999 999</p>
+                          <p>name.forname@ethnotendance.com</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
                 </div>
               </GridItem>
               <GridItem xs={12} sm={12} md={8} lg={8}>

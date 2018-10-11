@@ -6,7 +6,7 @@ import GridItem from '../../../common/grid/GridItem';
 import NavGallery from './NavGallery';
 import Socialbar from '../../../common/socialbar/Socialbar';
 import { Hidden } from '@material-ui/core';
-import Menu from '../../Menu/MenuGrid';
+import {Menu} from '../../Menu/Menu';
 
 import logo from '../../../assets/svg/etfw-logo.svg';
 import menu from '../../../assets/svg/menu.svg';
@@ -33,7 +33,17 @@ export default class Gallery extends Component {
         <Hidden only={['md', 'lg', 'xl']}>
         <div style={{position:'fixed', top:0, left:0, right:0, zIndex:9999}}>
             <GridContainer justify="space-between" alignItems="center" style={{backgroundColor:'white', height:'70px', textAlign:'center'}}>
-              <GridItem xs={3} sm={3}><img src={ticket} style={{height:'50px', width:'50px'}} alt="buy tickets"></img></GridItem>
+              <GridItem xs={3} sm={3}>
+              <a href="https://www.weezevent.com/widget_billeterie.php?id_evenement=376927&lg_billetterie=1&code=27912&resize=1&width_auto=1&color_primary=00AEEF" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={ticket}
+                    style={{
+                    height: '50px',
+                    width: '50px'
+                  }}
+                    alt="buy tickets"></img>
+                  </a>
+              </GridItem>
               <GridItem xs={4} sm={4}><img src={logo} style={{height:'50px', width:'100px'}} alt="ETFWB"></img></GridItem>
               <GridItem onClick={this.opened} xs={3} sm={3}><img src={menu} style={{height:'50px', width:'50px'}} alt="menu"></img></GridItem>
             </GridContainer>
