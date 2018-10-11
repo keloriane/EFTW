@@ -72,119 +72,110 @@ export default class NavHome extends Component {
                   <img className="logo_container fadeInFast" src={logo} alt="logo"></img>
                 </GridItem>
 
-                <GridItem
-                  style={{
-                  page: 'about'
-                }}
-                  xs={12}
-                  sm={12}
-                  md={12}
-                  onMouseEnter={this.handleChange}
-                  onMouseLeave={this.handleLeave}>
+                <GridItem xs={12} sm={12} md={12}>
+                  <div
+                    style={{
+                    page: "about"
+                  }}
+                    onMouseEnter={this.handleChange}
+                    onMouseLeave={this.handleLeave}>
+                    <NavLink className="home_boutons fadeInMedium" to='/about'>
 
-                  <NavLink className="home_boutons fadeInMedium" to='/about'>
+                      <HomeButton>
+                        <h2
+                          className="home_boutons"
+                          style={{
+                          page: "about",
+                          width: '100%'
+                        }}
+                          onMouseEnter={this.handleChange}
+                          onMouseLeave={this.handleLeave}>about</h2>
+                      </HomeButton>
 
-                    <HomeButton
-                      style={{
-                      page: 'about',
-                      width: '100%'
-                    }}
-                      onMouseEnter={this.handleChange}
-                      onMouseLeave={this.handleLeave}>
-                      <h2 className="home_boutons">about</h2>
-                    </HomeButton>
-
-                  </NavLink>
-
+                    </NavLink>
+                  </div>
                 </GridItem>
 
-                <GridItem
-                  style={{
-                  page: 'program'
-                }}
-                  xs={12}
-                  sm={12}
-                  md={12}
-                  onMouseEnter={this.handleChange}
-                  onMouseLeave={this.handleLeave}>
+                <GridItem xs={12} sm={12} md={12}>
+                  <div
+                    style={{
+                    page: 'program'
+                  }}
+                    onMouseEnter={this.handleChange}
+                    onMouseLeave={this.handleLeave}>
 
-                  <NavLink className="home_boutons" to='/program'>
+                    <NavLink className="home_boutons" to='/program'>
 
-                    <HomeButton
-                      style={{
-                      page: 'program',
-                      width: '100%'
-                    }}
-                      onMouseEnter={this.handleChange}
-                      onMouseLeave={this.handleLeave}>
-                      <h2 className="home_boutons fadeInMedium">2018 schedule</h2>
-                    </HomeButton>
+                      <HomeButton>
+                        <h2
+                          className="home_boutons fadeInMedium"
+                          style={{
+                          page: 'program',
+                          width: '100%'
+                        }}
+                          onMouseEnter={this.handleChange}
+                          onMouseLeave={this.handleLeave}>2018 schedule</h2>
+                      </HomeButton>
 
-                  </NavLink>
-
+                    </NavLink>
+                  </div>
                 </GridItem>
 
-                <GridItem
-                  style={{
-                  page: 'highlights'
-                }}
-                  xs={12}
-                  sm={12}
-                  md={12}
-                  onMouseEnter={this.handleChange}
-                  onMouseLeave={this.handleLeave}>
+                <GridItem xs={12} sm={12} md={12}>
+                  <div
+                    onMouseEnter={this.handleChange}
+                    onMouseLeave={this.handleLeave}
+                    style={{
+                    page: 'highlights'
+                  }}>
+                    <NavLink className="home_boutons" to='/highlights'>
 
-                  <NavLink className="home_boutons" to='/highlights'>
+                      <HomeButton>
+                        <h2
+                          className="home_boutons fadeInMedium"
+                          onMouseEnter={this.handleChange}
+                          onMouseLeave={this.handleLeave}
+                          style={{
+                          page: 'highlights'
+                        }}>highlights</h2>
+                      </HomeButton>
 
-                    <HomeButton
-                      style={{
-                      page: 'highlights',
-                      width: '100%'
-                    }}
-                      onMouseEnter={this.handleChange}
-                      onMouseLeave={this.handleLeave}>
-                      <h2 className="home_boutons fadeInMedium">highlights</h2>
-                    </HomeButton>
-
-                  </NavLink>
-
+                    </NavLink>
+                  </div>
                 </GridItem>
 
-                <GridItem
-                  style={{
-                  page: 'contact'
-                }}
-                  xs={12}
-                  sm={12}
-                  md={12}
-                  onMouseEnter={this.handleChange}
-                  onMouseLeave={this.handleLeave}>
+                <GridItem xs={12} sm={12} md={12}>
+                  <div
+                    style={{
+                    page: 'contact',
+                    width: '100%'
+                  }}
+                    onMouseEnter={this.handleChange}
+                    onMouseLeave={this.handleLeave}>
+                    <NavLink className="home_boutons" to='/contact'>
 
-                  <NavLink className="home_boutons" to='/contact'>
+                      <HomeButton>
+                        <h2
+                          className="home_boutons fadeInMedium"
+                          style={{
+                          page: 'contact',
+                          width: '100%'
+                        }}
+                          onMouseEnter={this.handleChange}
+                          onMouseLeave={this.handleLeave}>CONTACT</h2>
+                      </HomeButton>
 
-                    <HomeButton
-                      style={{
-                      page: 'contact',
-                      width: '100%'
-                    }}
-                      onMouseEnter={this.handleChange}
-                      onMouseLeave={this.handleLeave}>
-                      <h2 className="home_boutons fadeInMedium">CONTACT</h2>
-                    </HomeButton>
-
-                  </NavLink>
-
+                    </NavLink>
+                  </div>
                 </GridItem>
 
-                <GridItem
-                  style={{
-                  page: 'tickets'
-                }}
-                  xs={12}
-                  sm={12}
-                  md={12}
-                  onMouseEnter={this.handleChange}
-                  onMouseLeave={this.handleLeave}>
+                <GridItem xs={12} sm={12} md={12}>
+                  <div
+                    style={{
+                    page: 'tickets'
+                  }}
+                    onMouseEnter={this.handleChange}
+                    onMouseLeave={this.handleLeave}></div>
 
                   <a
                     href="https://www.weezevent.com/widget_billeterie.php?id_evenement=376927&lg_billetterie=1&code=27912&resize=1&width_auto=1&color_primary=00AEEF%22"
@@ -193,14 +184,15 @@ export default class NavHome extends Component {
                     className="home_boutons"
                     to='/'>
 
-                    <HomeButton
-                      style={{
-                      page: 'tickets',
-                      width: '100%'
-                    }}
-                      onMouseEnter={this.handleChange}
-                      onMouseLeave={this.handleLeave}>
-                      <h2 className="tickets_boutons fadeInMedium">buy tickets</h2>
+                    <HomeButton>
+                      <h2
+                        className="tickets_boutons fadeInMedium"
+                        style={{
+                        page: 'tickets',
+                        width: '100%'
+                      }}
+                        onMouseEnter={this.handleChange}
+                        onMouseLeave={this.handleLeave}>buy tickets</h2>
                     </HomeButton>
 
                   </a>
@@ -216,15 +208,30 @@ export default class NavHome extends Component {
                       <GridContainer className='home_social_bar fadeInSlow' justify='space-between'>
 
                         <GridItem xs={4} sm={4}>
-                          <i className="fab fa-facebook fa-2x"></i>
+                          <a
+                            href="https://www.facebook.com/EthnoTendanceFashionWeekBrussels/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <i className="fab fa-facebook fa-2x"></i>
+                          </a>
                         </GridItem>
 
                         <GridItem xs={4} sm={4}>
-                          <i className="fab fa-instagram fa-2x"></i>
+                          <a
+                            href="https://www.instagram.com/ethnotendance/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <i className="fab fa-instagram fa-2x"></i>
+                          </a>
                         </GridItem>
 
                         <GridItem xs={4} sm={4}>
-                          <i className="fab fa-youtube fa-2x"></i>
+                          <a
+                            href="https://www.youtube.com/channel/UCVE0KD2sjMOwZRUMWcXhgOg"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <i className="fab fa-youtube fa-2x"></i>
+                          </a>
                         </GridItem>
 
                       </GridContainer>

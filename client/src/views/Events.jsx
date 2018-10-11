@@ -90,7 +90,7 @@ export default class Program extends Component {
             </div>
           </Hidden>
           <GridItem xs={12} sm={12} md={10} lg={10}>
-            <div className="events-content">
+            <div className="events-content fadeInLeft fadeInSlow">
               <Agenda/>
               <Footer/>
             </div>

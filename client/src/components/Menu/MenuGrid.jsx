@@ -8,13 +8,6 @@ import rightImage from './../../assets/menu/img/right-picture.png'
 import leftImage from './../../assets/menu/img/left-picture.png'
 import {NavLink} from 'react-router-dom';
 
-import HomeButton from './../../common/customButtons/HomeButton';
-
-import address from './../../assets/img/address@2x.png';
-import whiteLogo from './../../assets/img/etfw-logo@2x.png';
-import imageSource from './../../assets/home/home.png';
-
-// I need to create a Menu component that will render either MenuGrid or MenuMobile
 export default class MenuGrid extends Component {
 
   handleReverse=()=>{
@@ -54,8 +47,7 @@ export default class MenuGrid extends Component {
   render() {
 
     return (
-      <div>  {/*className="menu-grid-container"*/}
-        {/* <Hidden only={["xs", "sm"]}> */}
+      <div>
           <GridContainer md={12} lg={12} xl={12}>
 
             <div className="menu-grid-container">
@@ -139,11 +131,7 @@ export default class MenuGrid extends Component {
                                 href="https://www.facebook.com/EthnoTendanceFashionWeekBrussels/"
                                 target="_blank"
                                 rel="noopener noreferrer">
-                                <i
-                                  className="fab fa-facebook fa-2x"
-                                  style={{
-                                  color: 'white'
-                                }}></i>
+                                <i className="fab fa-facebook fa-2x"></i>
                               </a>
                             </GridItem>
 
@@ -152,11 +140,7 @@ export default class MenuGrid extends Component {
                                 href="https://www.instagram.com/ethnotendance/"
                                 target="_blank"
                                 rel="noopener noreferrer">
-                                <i
-                                  className="fab fa-instagram fa-2x"
-                                  style={{
-                                  color: 'white'
-                                }}></i>
+                                <i className="fab fa-instagram fa-2x"></i>
                               </a>
                             </GridItem>
 
@@ -165,11 +149,7 @@ export default class MenuGrid extends Component {
                                 href="https://www.youtube.com/channel/UCVE0KD2sjMOwZRUMWcXhgOg"
                                 target="_blank"
                                 rel="noopener noreferrer">
-                                <i
-                                  className="fab fa-youtube fa-2x"
-                                  style={{
-                                  color: 'white'
-                                }}></i>
+                                <i className="fab fa-youtube fa-2x"></i>
                               </a>
                             </GridItem>
 
@@ -194,7 +174,6 @@ export default class MenuGrid extends Component {
             </div>
 
           </GridContainer>
-        {/* </Hidden> */}
       </div>
     )
   }
